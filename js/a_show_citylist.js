@@ -5,8 +5,6 @@ document.onkeydown = function(e) {
     }
 };
 
-
-
 let select_city = document.querySelector('.select-city');
 select_city.addEventListener('click', function() {
     show_citylist();
