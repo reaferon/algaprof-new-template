@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var jsmin = require('gulp-jsmin');
 //var notify = require("gulp-notify");
 var sass = require('gulp-sass');
-var recursive = require('gulp-recursive-folder');
+
 
 gulp.task('default', function () {
     gulp.watch('js/*.js', gulp.series('js_task'));

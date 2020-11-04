@@ -6,7 +6,13 @@
 @import "../helpers/normalize.css";
 
 
+@import "body";
 @import "header";
+@import "nav";
+@import "main";
+@import "footer";
+@import "container";
+
 @import "menu";
 @import "menu-list";
 @import "submenu-list";
@@ -15,3 +21,4 @@
 @import "cities";
 @import "overlay";
 @import "cities-container";
+

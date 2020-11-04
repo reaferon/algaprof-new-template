@@ -1,3 +1,4 @@
+/*
 let icon = document.querySelector('.search-form__icon');
 icon.addEventListener('click', function() {
     change_active([
@@ -7,4 +8,4 @@ icon.addEventListener('click', function() {
         'search-form__input',
         'search-form__button',
     ]);
-});
+});*/

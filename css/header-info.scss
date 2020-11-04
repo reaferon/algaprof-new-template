@@ -1,3 +1,4 @@
+/*
 @media (min-width : 320px) {
   .header-info {
     width: 100vw;
@@ -29,6 +30,10 @@
         content: '';
         background-image: url(../img/svg/cancel.svg);
       }
+    }
+
+    &__main-links {
+      @include list-reset();
     }
 
     &__item {
@@ -87,3 +92,9 @@
     }
   }
 }
+
+@media (min-width : 1280px) {
+  .header-info {
+    display: none;
+  }
+}*/

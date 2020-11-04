@@ -23,6 +23,10 @@ function show_citylist() {
             get_json('/cities-query.js', {query: query})
                 .then(data => build_citylist(data, cities_ul))      // обрабатываем результат вызова response.json()
                 .catch(error => console.error(error));
+        } else if(query.length === 0) {
+            get_json('/cities.js', {user: 'Krunal'})
+                .then(data => build_citylist(data, cities_ul))      // обрабатываем результат вызова response.json()
+                .catch(error => console.error(error))
         }
 
     });

@@ -1,5 +1,7 @@
+/*
 @media (min-width : 320px) {
   .submenu-list {
+    @include list-reset();
     display: flex;
     flex-wrap: wrap;
     position: fixed;
@@ -57,4 +59,4 @@
       font-size: 1.2em;
     }
   }
-}
+}*/

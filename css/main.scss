@@ -1,0 +1,19 @@
+@media (min-width : 320px) {
+  .main {
+
+    flex-grow: 1;
+    order: 2;
+  }
+}
+@media (min-width : 1280px) {
+  .main {
+    order: 3;
+  }
+}
+
+/*
+@media (min-width : 320px) {
+  .main {
+    margin: 48px auto;
+  }
+}*/

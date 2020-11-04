@@ -1,18 +1,42 @@
 @media (min-width : 320px) {
-  h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    //margin: 0;
-    font-family: 'Arial', serif;
-  }
   .header {
+    height: 48px;
+    background: red;
+    order: 1;
+  }
+}
+@media (min-width : 1280px) {
+  .header {
+    height: 64px;
+
+    &__logo {
+      width: 64px;
+      height: 64px;
+      outline: 1px solid #fff;
+    }
+    &__title {
+      background: #dadada;
+      height: 36px;
+      font-size: 1.2em;
+      width: 100%;
+      //position: relative;
+      //top: 96px;
+      margin: 0;
+
+    }
+  }
+}
+
+
+/*
+@media (min-width : 320px) {
+  .header {
+    font-family: 'Arial', serif;
     display: flex;
     height: 48px;
     width: 100vw;
     box-shadow: 2px 1px 5px #dadada;
-    background: #fff;
+    background: $color__grey-blue_dark;
     position: fixed;
     top:0;
 
@@ -34,6 +58,7 @@
         width: 32px;
         height: 32px;
         opacity: .5;
+        @include svg-invert();
       }
     }
 
@@ -45,13 +70,62 @@
       width: calc(100% - 96px);
       height: 48px;
       margin: 0 48px;
-      font-size: .7em;
+      font-size: .8em;
       text-align: center;
       //text-align: center;
       //padding: 5px 0;
-      color: #666;
-      text-shadow: 2px 2px 1px #dadada;
+      color: #fff;
+      text-shadow: 1px 1px 1px blueviolet;
     }
 
   }
 }
+@media (min-width : 1280px) {
+  .header {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 96px;
+    background: #fff;
+
+    &__logo {
+      width: 96px;
+      height: 96px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 0;
+
+      &::before {
+        display: block;
+        background-image: url(/img/favicon/apple-touch-icon-114x114.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        content: '';
+        width: 96px;
+        height: 96px;
+        opacity: .9;
+        -webkit-filter: none;
+        filter: none;
+      }
+    }
+
+    &__title {
+      outline: 1px solid red;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: absolute;
+      top: 96px;
+      width: 100%;
+      height: 36px;
+      margin: 0;
+      font-size: 1em;
+      text-align: left;
+      color: $color__grey-blue_dark;
+      text-shadow: 1px 1px 1px #dadada;
+    }
+  }
+}*/

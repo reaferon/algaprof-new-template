@@ -1,3 +1,4 @@
+/*
 @media (min-width : 320px) {
   .search-form {
     position: fixed;
@@ -9,7 +10,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
-    background: #fff;
+    background: $color__grey-blue_dark;
 
     &_active {
       height: 48px;
@@ -43,6 +44,7 @@
         opacity: .5;
         position: relative;
         z-index: 2;
+        @include svg-invert();
       }
 
       &_active::before {
@@ -77,12 +79,12 @@
       &_active {
         display: block;
         outline: #fff;
-        width: 48px;
+        width: 58px;
         height: 32px;
-        padding:0;
+        padding:0 5px;
         box-sizing: border-box;
         position: relative;
-        margin-left: -5px;
+        margin-left: -15px;
         border:0;
         border-top: 1px solid #999;
         border-bottom: 1px solid #999;
@@ -90,4 +92,4 @@
       }
     }
   }
-}
+}*/
