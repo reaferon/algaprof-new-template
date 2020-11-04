@@ -1,0 +1,24 @@
+@keyframes search_show {
+  from {width: 48px;}
+  to {width: 100%;}
+}
+@keyframes cities_on {
+  from {top: -700px;}
+  to {top: 10px;}
+}
+@keyframes cities_off {
+  from {top: 10px;}
+  to {top: -700px;}
+}
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+@keyframes overlay_on {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

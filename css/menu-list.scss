@@ -1,0 +1,62 @@
+@media (min-width : 320px) {
+  .menu-list {
+    @include list-reset();
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -3px 5px #999;
+    background: #526579;
+
+    &__item {
+      display: flex;
+      width: calc(100% / 5);
+      height: 50px;
+      font-size: .7em;
+
+      &_index {
+        display: none;
+      }
+    }
+
+    &__link {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+
+      &::before {
+        display: block;
+        height: 24px;
+        width: 24px;
+        margin-bottom: 4px;
+        content: '';
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 1;
+        @include svg-invert();
+      }
+
+      &_place_cart::before {
+        background-image: url(/img/svg/cart.svg);
+      }
+      &_place_delivery::before {
+        background-image: url(/img/svg/package.svg);
+      }
+      &_place_directory::before {
+        background-image: url(/img/svg/folder.svg);
+      }
+      &_place_discount::before {
+        background-image: url(/img/svg/percentage.svg);
+      }
+      &_place_profile::before {
+        background-image: url(../img/svg/avatar.svg);
+      }
+    }
+  }
+}

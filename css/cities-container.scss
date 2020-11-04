@@ -1,0 +1,79 @@
+@media (min-width : 320px) {
+  .cities-container {
+    z-index: 120;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 96vw;
+    height: calc(96vh - 10px);
+    animation: cities_off  .3s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+    background: #ffffff;
+    top: -700px;
+    //left: calc(50% - 150px);
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+
+    &_active {
+      animation: cities_on  .3s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+      top: 10px;
+    }
+
+    &__header {
+      width: 100vh;
+      height: 48px;
+      display: flex;
+    }
+    &__search {
+
+      margin: 5px;
+      font-size: 1.5em;
+    }
+    &__content {
+      @include list-reset();
+      flex-grow: 1;
+      margin: 5px;
+      overflow-y: auto;
+
+    }
+    &__close {
+      height: 48px;
+      //margin: 5px 5px 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fafafa;
+      border: none;
+
+      &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/svg/cancel.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: .7;
+        margin-right: 5px;
+      }
+    }
+    &__loader {
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 5px;
+        margin-right: 10px;
+        border-radius: 25%;
+        background-color: $color__grey-blue_dark;
+        animation-name: spin;
+        animation-duration: 1000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    }
+  }
+}

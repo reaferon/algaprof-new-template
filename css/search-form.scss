@@ -1,0 +1,93 @@
+@media (min-width : 320px) {
+  .search-form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: #fff;
+
+    &_active {
+      height: 48px;
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      animation: search_show  .3s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+    }
+
+    &__icon {
+      font-size: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      padding: 0;
+
+      &::before {
+        display: block;
+        background-image: url(/img/svg/search.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        content: '';
+        width: 24px;
+        height: 24px;
+        opacity: .5;
+        position: relative;
+        z-index: 2;
+      }
+
+      &_active::before {
+        background-image: url(/img/svg/cancel.svg);
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__label {
+      width: calc(100% - 100px);
+      height: 48px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__input {
+      display: none;
+
+      &_active {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 32px;
+      }
+    }
+
+    &__button {
+      display: none;
+
+      &_active {
+        display: block;
+        outline: #fff;
+        width: 48px;
+        height: 32px;
+        padding:0;
+        box-sizing: border-box;
+        position: relative;
+        margin-left: -5px;
+        border:0;
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+        border-right: 1px solid #999;
+      }
+    }
+  }
+}
