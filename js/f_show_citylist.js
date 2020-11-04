@@ -20,7 +20,7 @@ function show_citylist() {
     container__search.addEventListener('keyup', function() {
         let query = container__search.value;
         if(query.length >= 3) {
-            get_json('/cities.js', {query: query})
+            get_json('/cities-query.js', {query: query})
                 .then(data => build_citylist(data, cities_ul))      // обрабатываем результат вызова response.json()
                 .catch(error => console.error(error));
         }
