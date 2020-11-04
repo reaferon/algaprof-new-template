@@ -2,13 +2,13 @@
   .body {
     font-family: Arial, sans-serif;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows:  48px 36px auto 96px;
+    width: 100%;
+    grid-template-columns: 48px auto;
+    grid-template-rows:  48px auto 96px;
     grid-template-areas:
-      "header"
-      "title"
-      "main"
-      "nav";
+      "header title"
+      "main main"
+      "nav nav";
   }
 }
 

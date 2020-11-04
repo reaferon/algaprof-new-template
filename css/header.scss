@@ -3,12 +3,34 @@
     grid-area: header;
 
     &__logo {
+      grid-area: logo;
       display: flex;
-      font-size:.7em;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
 
-
+      &::before {
+        width: 36px;
+        height: 36px;
+        background-size: cover;
+        display: block;
+        content: '';
+        background-image: url('/img/logo.svg');
+      }
     }
-
+    &__location {
+      display: none;
+    }
+    &__search {
+      display: none;
+    }
+    &__profile {
+      display: none;
+    }
+    &__cart {
+      display: none;
+    }
   }
 }
 @media (min-width : 1280px) {

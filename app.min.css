@@ -444,9 +444,10 @@ template {
   .body {
     font-family: Arial, sans-serif;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 48px 36px auto 96px;
-    grid-template-areas: "header" "title" "main" "nav";
+    width: 100%;
+    grid-template-columns: 48px auto;
+    grid-template-rows: 48px auto 96px;
+    grid-template-areas: "header title" "main main" "nav nav";
   }
 }
 
@@ -470,8 +471,37 @@ template {
   }
 
   .header__logo {
+    grid-area: logo;
     display: flex;
-    font-size: .7em;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+  }
+
+  .header__logo::before {
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+    display: block;
+    content: '';
+    background-image: url("../../img/logo.svg");
+  }
+
+  .header__location {
+    display: none;
+  }
+
+  .header__search {
+    display: none;
+  }
+
+  .header__profile {
+    display: none;
+  }
+
+  .header__cart {
+    display: none;
   }
 }
 
@@ -532,6 +562,7 @@ template {
 
 @media (min-width: 320px) {
   .nav {
+    grid-area: nav;
     position: fixed;
     bottom: 0;
     width: 100vw;
@@ -543,7 +574,6 @@ template {
 
 @media (min-width: 1280px) {
   .nav {
-    grid-area: nav;
     position: relative;
     order: 2;
     width: auto;
@@ -554,13 +584,17 @@ template {
 @media (min-width: 320px) {
   .title {
     grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    padding: 0;
-    font-size: 1em;
+    padding: 5px;
+    font-size: .8em;
+    color: #666;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 320px) {
   .main {
     grid-area: main;
   }
