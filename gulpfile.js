@@ -27,7 +27,7 @@ gulp.task('css_task', function (done) {
         .pipe(notify({
             'title': 'CSS',
             'message': 'Styles was change',
-            'sound': 'Pop',
+           // 'sound': 'Pop',
             'onLast': true,
             'wait': true
         }))
@@ -45,7 +45,7 @@ gulp.task('js_task', function (done) {
         .pipe(notify({
             'title': 'Javascript',
             'message': 'JS was change',
-            'sound': 'Pop',
+            //'sound': 'Pop',
             //"icon": path.join(__dirname, "gulp.png"), // case sensitive
             'onLast': true,
             'wait': true

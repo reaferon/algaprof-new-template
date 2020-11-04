@@ -1,20 +1,12 @@
 @media (min-width : 320px) {
   .footer {
-    background: orange;
     display: none;
   }
 }
+
 @media (min-width : 1280px) {
   .footer {
+    grid-area: footer;
     display: flex;
-    height: 96px;
-    order: 4;
   }
 }
-
-/*
-@media (min-width : 320px) {
-  .main {
-    margin: 48px auto;
-  }
-}*/

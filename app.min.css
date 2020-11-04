@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -440,236 +442,166 @@ template {
 
 @media (min-width: 320px) {
   .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 48px 36px auto 96px;
+    grid-template-areas: "header" "title" "main" "nav";
+  }
+}
+
+@media (min-width: 1280px) {
+  .body {
+    grid-template-columns: auto 1280px auto;
+    grid-template-rows: 96px 48px 36px auto 96px;
+    grid-template-areas: ". header ." ". nav ." ". title ." ". main ." ". footer .";
+  }
+}
+
+@media (min-width: 1440px) {
+  .body {
+    grid-template-columns: auto 1440px auto;
   }
 }
 
 @media (min-width: 320px) {
   .header {
-    height: 48px;
-    background: red;
-    order: 1;
-  }
-}
-
-@media (min-width: 1280px) {
-  .header {
-    height: 64px;
+    grid-area: header;
   }
 
   .header__logo {
-    width: 64px;
-    height: 64px;
-    outline: 1px solid #fff;
-  }
-
-  .header__title {
-    background: #dadada;
-    height: 36px;
-    font-size: 1.2em;
-    width: 100%;
-    margin: 0;
-  }
-}
-
-/*
-@media (min-width : 320px) {
-  .header {
-    font-family: 'Arial', serif;
     display: flex;
-    height: 48px;
-    width: 100vw;
-    box-shadow: 2px 1px 5px #dadada;
-    background: $color__grey-blue_dark;
-    position: fixed;
-    top:0;
-
-    &__logo {
-      width: 48px;
-      height: 48px;
-      position: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &::before {
-        display: block;
-        background-image: url(/img/svg/menu.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        content: '';
-        width: 32px;
-        height: 32px;
-        opacity: .5;
-        @include svg-invert();
-      }
-    }
-
-    &__title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      width: calc(100% - 96px);
-      height: 48px;
-      margin: 0 48px;
-      font-size: .8em;
-      text-align: center;
-      //text-align: center;
-      //padding: 5px 0;
-      color: #fff;
-      text-shadow: 1px 1px 1px blueviolet;
-    }
-
+    font-size: .7em;
   }
 }
-@media (min-width : 1280px) {
+
+@media (min-width: 1280px) {
   .header {
-    position: relative;
-    max-width: 1280px;
-    margin: 0 auto;
-    height: 96px;
-    background: #fff;
-
-    &__logo {
-      width: 96px;
-      height: 96px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      order: 0;
-
-      &::before {
-        display: block;
-        background-image: url(/img/favicon/apple-touch-icon-114x114.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        content: '';
-        width: 96px;
-        height: 96px;
-        opacity: .9;
-        -webkit-filter: none;
-        filter: none;
-      }
-    }
-
-    &__title {
-      outline: 1px solid red;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      position: absolute;
-      top: 96px;
-      width: 100%;
-      height: 36px;
-      margin: 0;
-      font-size: 1em;
-      text-align: left;
-      color: $color__grey-blue_dark;
-      text-shadow: 1px 1px 1px #dadada;
-    }
+    display: grid;
+    grid-template-columns: 280px 300px auto 96px 96px;
+    grid-template-rows: 48px 48px;
+    grid-template-areas: "logo location . profile cart" "logo search search profile cart";
   }
-}*/
+
+  .header__logo {
+    grid-area: logo;
+    width: 280px;
+    font-size: 2.4em;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .header__logo::before {
+    width: 72px;
+    height: 72px;
+    background-size: cover;
+    display: block;
+    content: '';
+    background-image: url("../../img/logo.svg");
+  }
+
+  .header__logo::after {
+    display: flex;
+    align-items: flex-end;
+    content: 'Альгапроф';
+    width: 200px;
+    height: 72px;
+    color: #666;
+  }
+
+  .header__location {
+    grid-area: location;
+  }
+
+  .header__search {
+    grid-area: search;
+  }
+
+  .header__profile {
+    grid-area: profile;
+  }
+
+  .header__cart {
+    grid-area: cart;
+  }
+}
 
 @media (min-width: 320px) {
   .nav {
-    background: greenyellow;
-    height: 48px;
-    order: 3;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    order: 5;
+    background: red;
+    height: 48px;
   }
 }
 
 @media (min-width: 1280px) {
   .nav {
-    order: 2;
+    grid-area: nav;
     position: relative;
-    height: 36px;
+    order: 2;
+    width: auto;
+    bottom: auto;
   }
 }
 
-/*
-@media (min-width : 320px) {
-  .main {
-    margin: 48px auto;
-  }
-}*/
-
 @media (min-width: 320px) {
-  .main {
-    flex-grow: 1;
-    order: 2;
+  .title {
+    grid-area: title;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
   }
 }
 
 @media (min-width: 1280px) {
   .main {
-    order: 3;
+    grid-area: main;
   }
 }
-
-/*
-@media (min-width : 320px) {
-  .main {
-    margin: 48px auto;
-  }
-}*/
 
 @media (min-width: 320px) {
   .footer {
-    background: orange;
     display: none;
   }
 }
 
 @media (min-width: 1280px) {
   .footer {
+    grid-area: footer;
     display: flex;
-    height: 96px;
-    order: 4;
   }
 }
 
 /*
 @media (min-width : 320px) {
-  .main {
-    margin: 48px auto;
-  }
-}*/
-
-@media (min-width: 320px) {
   .container {
-    display: flex;
+    //display: flex;
     min-height: 100%;
-    outline: 1px solid blue;
-  }
 
-  .container_type_column {
-    flex-direction: column;
+    &_type_column {
+      flex-direction: column;
+    }
   }
 }
-
-@media (min-width: 1280px) {
+@media (min-width : 1280px) {
   .container {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
   }
 }
-
-@media (min-width: 1440px) {
+@media (min-width : 1440px) {
   .container {
     max-width: 1440px;
   }
-}
+}*/
 
 /*
 @media (min-width : 320px) {

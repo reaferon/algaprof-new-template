@@ -1,131 +1,71 @@
 @media (min-width : 320px) {
   .header {
-    height: 48px;
-    background: red;
-    order: 1;
-  }
-}
-@media (min-width : 1280px) {
-  .header {
-    height: 64px;
+    grid-area: header;
 
     &__logo {
-      width: 64px;
-      height: 64px;
-      outline: 1px solid #fff;
-    }
-    &__title {
-      background: #dadada;
-      height: 36px;
-      font-size: 1.2em;
-      width: 100%;
-      //position: relative;
-      //top: 96px;
-      margin: 0;
-
-    }
-  }
-}
-
-
-/*
-@media (min-width : 320px) {
-  .header {
-    font-family: 'Arial', serif;
-    display: flex;
-    height: 48px;
-    width: 100vw;
-    box-shadow: 2px 1px 5px #dadada;
-    background: $color__grey-blue_dark;
-    position: fixed;
-    top:0;
-
-    &__logo {
-      width: 48px;
-      height: 48px;
-      position: fixed;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      font-size:.7em;
 
-      &::before {
-        display: block;
-        background-image: url(/img/svg/menu.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        content: '';
-        width: 32px;
-        height: 32px;
-        opacity: .5;
-        @include svg-invert();
-      }
-    }
 
-    &__title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      width: calc(100% - 96px);
-      height: 48px;
-      margin: 0 48px;
-      font-size: .8em;
-      text-align: center;
-      //text-align: center;
-      //padding: 5px 0;
-      color: #fff;
-      text-shadow: 1px 1px 1px blueviolet;
     }
 
   }
 }
 @media (min-width : 1280px) {
   .header {
-    position: relative;
-    max-width: 1280px;
-    margin: 0 auto;
-    height: 96px;
-    background: #fff;
+    display: grid;
+    grid-template-columns: 280px 300px auto 96px 96px;
+    grid-template-rows:  48px 48px;
+    grid-template-areas:
+      "logo location . profile cart"
+      "logo search search profile cart";
+
 
     &__logo {
-      width: 96px;
-      height: 96px;
-      position: relative;
-      display: flex;
-      justify-content: center;
+      grid-area: logo;
+      width: 280px;
+      //font-size: 0;
+      font-size: 2.4em;
+      justify-content: space-between;
       align-items: center;
-      order: 0;
+      color: #666;
+      text-decoration: none;
+      box-sizing: border-box;
+      padding: 0;
 
       &::before {
-        display: block;
-        background-image: url(/img/favicon/apple-touch-icon-114x114.png);
+        width: 72px;
+        height: 72px;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
+        display: block;
         content: '';
-        width: 96px;
-        height: 96px;
-        opacity: .9;
-        -webkit-filter: none;
-        filter: none;
+        background-image: url('/img/logo.svg');
+      }
+      &::after {
+        display: flex;
+        align-items: flex-end;
+        content: 'Альгапроф';
+        width: 200px;
+        height: 72px;
+        color: #666;
+
       }
     }
-
-    &__title {
-      outline: 1px solid red;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      position: absolute;
-      top: 96px;
-      width: 100%;
-      height: 36px;
-      margin: 0;
-      font-size: 1em;
-      text-align: left;
-      color: $color__grey-blue_dark;
-      text-shadow: 1px 1px 1px #dadada;
+    &__location {
+      grid-area: location;
     }
+    &__search {
+      grid-area: search;
+    }
+    &__profile {
+      grid-area: profile;
+    }
+    &__cart {
+      grid-area: cart;
+    }
+
+
+
+
   }
-}*/
+}
