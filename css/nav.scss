@@ -5,13 +5,14 @@
     bottom: 0;
     width: 100vw;
     order: 5;
-    background: red;
     height: 48px;
+    //background: #fff;
   }
 }
 
-@media (min-width : 1280px) {
+@media (min-width : 1024px) {
   .nav {
+    height: 96px;
     position: relative;
     order: 2;
     width: auto;

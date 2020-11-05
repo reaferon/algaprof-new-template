@@ -1,6 +1,14 @@
 @media (min-width : 320px) {
   .header {
     grid-area: header;
+  }
+}
+
+/*
+@media (min-width : 320px) {
+  .header {
+    grid-area: header;
+
 
     &__logo {
       grid-area: logo;
@@ -9,6 +17,7 @@
       align-items: center;
       width: 48px;
       height: 48px;
+
 
       &::before {
         width: 36px;
@@ -46,6 +55,7 @@
     &__logo {
       grid-area: logo;
       width: 280px;
+      height: 96px;
       //font-size: 0;
       font-size: 2.4em;
       justify-content: space-between;
@@ -90,4 +100,4 @@
 
 
   }
-}
+}*/

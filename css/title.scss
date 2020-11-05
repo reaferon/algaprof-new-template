@@ -1,12 +1,17 @@
 @media (min-width : 320px) {
   .title {
     grid-area: title;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
-    padding: 5px;
-    font-size: .8em;
-    color: #666;
+    padding: 0;
   }
+  //.title {
+  //  grid-area: title;
+  //  display: flex;
+  //  justify-content: center;
+  //  align-items: center;
+  //  margin: 0;
+  //  padding: 5px;
+  //  font-size: .8em;
+  //  color: #666;
+  //}
 }

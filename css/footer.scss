@@ -1,12 +1,12 @@
 @media (min-width : 320px) {
   .footer {
+    grid-area: footer;
     display: none;
   }
 }
 
-@media (min-width : 1280px) {
+@media (min-width : 1024px) {
   .footer {
-    grid-area: footer;
     display: flex;
   }
 }

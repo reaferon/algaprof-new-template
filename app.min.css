@@ -445,23 +445,36 @@ template {
     font-family: Arial, sans-serif;
     display: grid;
     width: 100%;
-    grid-template-columns: 48px auto;
+    min-height: 100vh;
+    grid-template-columns: 48px calc(100% - 48px);
     grid-template-rows: 48px auto 96px;
     grid-template-areas: "header title" "main main" "nav nav";
+  }
+
+  .body > * {
+    outline: 1px solid #000;
+  }
+}
+
+@media (min-width: 1024px) {
+  .body {
+    grid-template-columns: auto 724px 300px auto;
+    grid-template-rows: 96px 36px auto 196px;
+    grid-template-areas: ". header nav ." ". title title ." ". main main ." ". footer footer .";
+    background: url("../../img/dust_bg.jpg") top left repeat-x, url("../../img/stripes.png") bottom left repeat-x;
+    background-size: auto 96px, auto 196px;
   }
 }
 
 @media (min-width: 1280px) {
   .body {
-    grid-template-columns: auto 1280px auto;
-    grid-template-rows: 96px 48px 36px auto 96px;
-    grid-template-areas: ". header ." ". nav ." ". title ." ". main ." ". footer .";
+    grid-template-columns: auto 880px 300px auto;
   }
 }
 
 @media (min-width: 1440px) {
   .body {
-    grid-template-columns: auto 1440px auto;
+    grid-template-columns: auto 1140px 300px auto;
   }
 }
 
@@ -469,96 +482,105 @@ template {
   .header {
     grid-area: header;
   }
-
-  .header__logo {
-    grid-area: logo;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-  }
-
-  .header__logo::before {
-    width: 36px;
-    height: 36px;
-    background-size: cover;
-    display: block;
-    content: '';
-    background-image: url("../../img/logo.svg");
-  }
-
-  .header__location {
-    display: none;
-  }
-
-  .header__search {
-    display: none;
-  }
-
-  .header__profile {
-    display: none;
-  }
-
-  .header__cart {
-    display: none;
-  }
 }
 
-@media (min-width: 1280px) {
+/*
+@media (min-width : 320px) {
+  .header {
+    grid-area: header;
+
+
+    &__logo {
+      grid-area: logo;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+
+
+      &::before {
+        width: 36px;
+        height: 36px;
+        background-size: cover;
+        display: block;
+        content: '';
+        background-image: url('/img/logo.svg');
+      }
+    }
+    &__location {
+      display: none;
+    }
+    &__search {
+      display: none;
+    }
+    &__profile {
+      display: none;
+    }
+    &__cart {
+      display: none;
+    }
+  }
+}
+@media (min-width : 1280px) {
   .header {
     display: grid;
     grid-template-columns: 280px 300px auto 96px 96px;
-    grid-template-rows: 48px 48px;
-    grid-template-areas: "logo location . profile cart" "logo search search profile cart";
-  }
+    grid-template-rows:  48px 48px;
+    grid-template-areas:
+      "logo location . profile cart"
+      "logo search search profile cart";
 
-  .header__logo {
-    grid-area: logo;
-    width: 280px;
-    font-size: 2.4em;
-    justify-content: space-between;
-    align-items: center;
-    color: #666;
-    text-decoration: none;
-    box-sizing: border-box;
-    padding: 0;
-  }
 
-  .header__logo::before {
-    width: 72px;
-    height: 72px;
-    background-size: cover;
-    display: block;
-    content: '';
-    background-image: url("../../img/logo.svg");
-  }
+    &__logo {
+      grid-area: logo;
+      width: 280px;
+      height: 96px;
+      //font-size: 0;
+      font-size: 2.4em;
+      justify-content: space-between;
+      align-items: center;
+      color: #666;
+      text-decoration: none;
+      box-sizing: border-box;
+      padding: 0;
 
-  .header__logo::after {
-    display: flex;
-    align-items: flex-end;
-    content: 'Альгапроф';
-    width: 200px;
-    height: 72px;
-    color: #666;
-  }
+      &::before {
+        width: 72px;
+        height: 72px;
+        background-size: cover;
+        display: block;
+        content: '';
+        background-image: url('/img/logo.svg');
+      }
+      &::after {
+        display: flex;
+        align-items: flex-end;
+        content: 'Альгапроф';
+        width: 200px;
+        height: 72px;
+        color: #666;
 
-  .header__location {
-    grid-area: location;
-  }
+      }
+    }
+    &__location {
+      grid-area: location;
+    }
+    &__search {
+      grid-area: search;
+    }
+    &__profile {
+      grid-area: profile;
+    }
+    &__cart {
+      grid-area: cart;
+    }
 
-  .header__search {
-    grid-area: search;
-  }
 
-  .header__profile {
-    grid-area: profile;
-  }
 
-  .header__cart {
-    grid-area: cart;
+
   }
-}
+}*/
 
 @media (min-width: 320px) {
   .nav {
@@ -567,13 +589,13 @@ template {
     bottom: 0;
     width: 100vw;
     order: 5;
-    background: red;
     height: 48px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .nav {
+    height: 96px;
     position: relative;
     order: 2;
     width: auto;
@@ -584,13 +606,8 @@ template {
 @media (min-width: 320px) {
   .title {
     grid-area: title;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
-    padding: 5px;
-    font-size: .8em;
-    color: #666;
+    padding: 0;
   }
 }
 
@@ -602,13 +619,13 @@ template {
 
 @media (min-width: 320px) {
   .footer {
+    grid-area: footer;
     display: none;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .footer {
-    grid-area: footer;
     display: flex;
   }
 }

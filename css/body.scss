@@ -3,34 +3,67 @@
     font-family: Arial, sans-serif;
     display: grid;
     width: 100%;
-    grid-template-columns: 48px auto;
+    min-height: 100vh;
+    grid-template-columns: 48px calc(100% - 48px);
     grid-template-rows:  48px auto 96px;
     grid-template-areas:
       "header title"
       "main main"
       "nav nav";
+
+    &>* {
+      outline: 1px solid #000;
+    }
   }
+  //.body {
+  //  font-family: Arial, sans-serif;
+  //  display: grid;
+  //  width: 100%;
+  //  grid-template-columns: 48px calc(100% - 48px);
+  //  grid-template-rows:  48px auto 96px;
+  //  grid-template-areas:
+  //    "header title"
+  //    "main main"
+  //    "nav nav";
+  //}
 }
 
+@media (min-width : 1024px) {
+  .body {
+    grid-template-columns: auto 724px 300px auto;
+    grid-template-rows:  96px 36px auto 196px;
+    grid-template-areas:
+      ". header nav ."
+      ". title title ."
+      ". main main ."
+      ". footer footer .";
+    background:
+            url(/img/dust_bg.jpg) top left repeat-x,
+            url(/img/stripes.png) bottom left repeat-x;
+    background-size: auto 96px, auto 196px;
+  }
+}
 @media (min-width : 1280px) {
   .body {
-    grid-template-columns: auto 1280px auto;
-    grid-template-rows:  96px 48px 36px auto 96px;
-    grid-template-areas:
-      ". header ."
-      ". nav ."
-      ". title ."
-      ". main ."
-      ". footer .";
-
+    grid-template-columns: auto 880px 300px auto;
   }
+  //.body {
+  //  grid-template-columns: auto 1280px auto;
+  //  grid-template-rows:  96px 48px 36px auto 96px;
+  //  grid-template-areas:
+  //    ". header ."
+  //    ". nav ."
+  //    ". title ."
+  //    ". main ."
+  //    ". footer .";
+  //
+  //}
 
 
 }
+
 @media (min-width : 1440px) {
   .body {
-    grid-template-columns: auto 1440px auto;
+    grid-template-columns: auto 1140px 300px auto;
   }
-
-
 }
