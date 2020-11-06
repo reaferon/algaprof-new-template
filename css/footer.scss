@@ -8,5 +8,8 @@
 @media (min-width : 1024px) {
   .footer {
     display: flex;
+    background: url(/img/stripes.png) top left repeat-x #dadada;
+    box-shadow: 0 -2px 5px #999;
+    //margin-top: -196px;
   }
 }

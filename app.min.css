@@ -450,19 +450,24 @@ template {
     grid-template-rows: 48px auto 96px;
     grid-template-areas: "header title" "main main" "nav nav";
   }
-
-  .body > * {
-    outline: 1px solid #000;
-  }
 }
 
 @media (min-width: 1024px) {
   .body {
     grid-template-columns: auto 724px 300px auto;
-    grid-template-rows: 96px 36px auto 196px;
-    grid-template-areas: ". header nav ." ". title title ." ". main main ." ". footer footer .";
-    background: url("../../img/dust_bg.jpg") top left repeat-x, url("../../img/stripes.png") bottom left repeat-x;
-    background-size: auto 96px, auto 196px;
+    grid-template-rows: 96px 0 36px auto 196px;
+    grid-template-areas: ". header nav ." "bg-top bg-top bg-top bg-top" ". title title ." ". main main ." "footer footer footer footer";
+  }
+
+  .body::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 96px;
+    background: url("../../img/dust_bg.jpg") top left repeat-x #dadada;
+    grid-area: bg-top;
+    margin-top: -96px;
+    box-shadow: 0 2px 5px #999;
   }
 }
 
@@ -617,6 +622,12 @@ template {
   }
 }
 
+@media (min-width: 1024px) {
+  .main {
+    padding-bottom: 20px;
+  }
+}
+
 @media (min-width: 320px) {
   .footer {
     grid-area: footer;
@@ -627,6 +638,8 @@ template {
 @media (min-width: 1024px) {
   .footer {
     display: flex;
+    background: url("../../img/stripes.png") top left repeat-x #dadada;
+    box-shadow: 0 -2px 5px #999;
   }
 }
 
