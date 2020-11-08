@@ -445,28 +445,31 @@ template {
     font-family: Arial, sans-serif;
     display: grid;
     width: 100%;
+    margin: 0;
+    padding: 0;
     min-height: 100vh;
     grid-template-columns: 48px calc(100% - 48px);
     grid-template-rows: 48px auto 96px;
-    grid-template-areas: "header title" "main main" "nav nav";
+    grid-template-areas: "header title" "main main" "nav nav";
   }
 }
 
 @media (min-width: 1024px) {
   .body {
     grid-template-columns: auto 724px 300px auto;
-    grid-template-rows: 96px 0 36px auto 196px;
+    grid-template-rows: 106px 0 36px auto 196px;
     grid-template-areas: ". header nav ." "bg-top bg-top bg-top bg-top" ". title title ." ". main main ." "footer footer footer footer";
+    background: linear-gradient(to top, #f5f1de, #d5f6f4);
   }
 
   .body::before {
     display: block;
     content: '';
     width: 100%;
-    height: 96px;
+    height: 106px;
     background: url("../../img/dust_bg.jpg") top left repeat-x #dadada;
     grid-area: bg-top;
-    margin-top: -96px;
+    margin-top: -106px;
     box-shadow: 0 2px 5px #999;
   }
 }
@@ -486,6 +489,156 @@ template {
 @media (min-width: 320px) {
   .header {
     grid-area: header;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 48px;
+    grid-template-rows: 48px;
+    grid-template-areas: "directory";
+  }
+
+  .header__location {
+    grid-area: location;
+    display: none;
+  }
+
+  .header__phone {
+    grid-area: phone;
+    display: none;
+  }
+
+  .header__discounts {
+    grid-area: discounts;
+    display: none;
+  }
+
+  .header__directory {
+    grid-area: directory;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+  }
+
+  .header__directory::before {
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+    display: block;
+    content: '';
+    background-image: url("../../img/svg/menu-round.svg");
+    opacity: .7;
+  }
+
+  .header__logo {
+    grid-area: logo;
+    display: none;
+  }
+
+  .header__search {
+    grid-area: search;
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    grid-area: header;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60px 240px 33.33% auto;
+    grid-template-rows: 46px 60px;
+    grid-template-areas: "location location phone discounts" "directory logo search search";
+  }
+
+  .header__location {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .header__location::before {
+    display: block;
+    width: 18px;
+    height: 18px;
+    content: '';
+    margin-right: 5px;
+    background-image: url("../../img/svg/location.svg");
+    background-size: cover;
+    color: #2ba6cb;
+  }
+
+  .header__location:hover {
+    color: #999;
+  }
+
+  .header__location:hover::before {
+    opacity: .5;
+  }
+
+  .header__phone {
+    grid-area: phone;
+    display: flex;
+    align-items: center;
+  }
+
+  .header__discounts {
+    grid-area: discounts;
+    display: flex;
+    align-items: center;
+  }
+
+  .header__directory {
+    grid-area: directory;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .8em;
+    height: 60px;
+    width: 60px;
+    text-decoration: none;
+    color: #666;
+  }
+
+  .header__directory::before {
+    width: 42px;
+    height: 42px;
+    background-size: cover;
+    display: block;
+    content: '';
+    background-image: url("../../img/svg/menu-round.svg");
+    opacity: .7;
+  }
+
+  .header__logo {
+    grid-area: logo;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #999;
+    font-size: 1.8em;
+    padding: 0 0 0 20px;
+    align-self: center;
+  }
+
+  .header__logo::before {
+    width: 42px;
+    height: 42px;
+    background-size: cover;
+    display: block;
+    content: '';
+    background-image: url("../../img/logo.svg");
+    align-self: flex-start;
+    margin-right: 10px;
+  }
+
+  .header__logo:hover {
+    text-shadow: 1px 1px 1px #2ba6cb;
+  }
+
+  .header__search {
+    grid-area: search;
+    display: flex;
   }
 }
 
@@ -595,6 +748,8 @@ template {
     width: 100vw;
     order: 5;
     height: 48px;
+    background: url("../../img/dust_bg.jpg") top left repeat-x #dadada;
+    box-shadow: 0 -2px 5px #999;
   }
 }
 
@@ -605,6 +760,7 @@ template {
     order: 2;
     width: auto;
     bottom: auto;
+    box-shadow: none;
   }
 }
 
@@ -613,6 +769,21 @@ template {
     grid-area: title;
     margin: 0;
     padding: 0;
+    font-size: .8em;
+    text-align: center;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    text-align: left;
+    justify-content: flex-start;
+    font-size: .9em;
+    padding: 0 5px;
   }
 }
 

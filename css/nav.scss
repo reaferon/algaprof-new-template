@@ -6,6 +6,8 @@
     width: 100vw;
     order: 5;
     height: 48px;
+    background: url(/img/dust_bg.jpg) top left repeat-x #dadada;
+    box-shadow: 0 -2px 5px #999;
     //background: #fff;
   }
 }
@@ -17,5 +19,6 @@
     order: 2;
     width: auto;
     bottom: auto;
+    box-shadow: none;
   }
 }
