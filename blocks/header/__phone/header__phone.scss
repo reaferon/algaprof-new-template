@@ -1,0 +1,14 @@
+@media (min-width : 320px) {
+  .header__phone {
+    grid-area: phone;
+    display: none;
+  }
+}
+
+@media (min-width : 1024px) {
+  .header__phone {
+    grid-area: phone;
+    display: flex;
+    align-items: center;
+  }
+}

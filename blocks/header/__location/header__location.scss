@@ -1,0 +1,34 @@
+@media (min-width : 320px) {
+  .header__location {
+    grid-area: location;
+    display: none;
+  }
+}
+
+@media (min-width : 1024px) {
+  .header__location {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &::before {
+      display: block;
+      width: 18px;
+      height: 18px;
+      content: '';
+      margin-right: 5px;
+      background-image: url(/img/svg/location.svg);
+      background-size: cover;
+      color: $color_link;
+    }
+
+    &:hover {
+      color: #999;
+
+      &::before {
+        opacity: .5;
+      }
+    }
+  }
+}

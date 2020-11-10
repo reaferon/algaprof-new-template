@@ -1,0 +1,13 @@
+@media (min-width : 320px) {
+  .footer {
+    grid-area: footer;
+    display: none;
+  }
+}
+@media (min-width : 1024px) {
+  .footer {
+    display: flex;
+    background: url(/img/stripes.png) top left repeat-x #dadada;
+    box-shadow: 0 -2px 5px #999;
+  }
+}

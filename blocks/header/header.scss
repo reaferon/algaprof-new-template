@@ -1,0 +1,24 @@
+@media (min-width : 320px) {
+  .header {
+    grid-area: header;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 48px;
+    grid-template-rows:  48px;
+    grid-template-areas:
+      "directory";
+  }
+}
+
+@media (min-width : 1024px) {
+  .header {
+    grid-area: header;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60px 240px 33.33% auto;
+    grid-template-rows:  46px 60px;
+    grid-template-areas:
+      "location location phone discounts"
+      "directory logo search search";
+  }
+}

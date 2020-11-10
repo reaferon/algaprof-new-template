@@ -1,0 +1,23 @@
+@media (min-width : 320px) {
+  .navigation {
+    grid-area: nav;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    order: 5;
+    height: 48px;
+    background: url(/img/dust_bg.jpg) top left repeat-x #dadada;
+    box-shadow: 0 -2px 5px #999;
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation {
+    height: 96px;
+    position: relative;
+    order: 2;
+    width: auto;
+    bottom: auto;
+    box-shadow: none;
+  }
+}

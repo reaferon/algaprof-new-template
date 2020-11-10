@@ -1,0 +1,11 @@
+@media (min-width : 320px) {
+  .main {
+    grid-area: main;
+  }
+}
+
+@media (min-width : 1024px) {
+  .main {
+    padding-bottom: 20px;
+  }
+}

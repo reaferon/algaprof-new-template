@@ -1,0 +1,14 @@
+@media (min-width : 320px) {
+  .header__discounts {
+    grid-area: discounts;
+    display: none;
+  }
+}
+
+@media (min-width : 1024px) {
+  .header__discounts {
+    grid-area: discounts;
+    display: flex;
+    align-items: center;
+  }
+}

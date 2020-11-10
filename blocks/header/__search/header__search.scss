@@ -1,0 +1,13 @@
+@media (min-width : 320px) {
+  .header__search {
+    grid-area: search;
+    display: none;
+  }
+}
+
+@media (min-width : 1024px) {
+  .header__search {
+    grid-area: search;
+    display: flex;
+  }
+}

@@ -1,0 +1,43 @@
+@media (min-width : 320px) {
+  .header__directory {
+    grid-area: directory;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+      background-size: cover;
+      display: block;
+      content: '';
+      background-image: url(/img/svg/menu-round.svg);
+      opacity: .7;
+    }
+  }
+}
+
+@media (min-width : 1024px) {
+  .header__directory {
+    grid-area: directory;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .8em;
+    height: 60px;
+    width: 60px;
+    text-decoration: none;
+    color: #666;
+
+    &::before {
+      width: 42px;
+      height: 42px;
+      background-size: cover;
+      display: block;
+      content: '';
+      background-image: url(/img/svg/menu-round.svg);
+      opacity: .7;
+    }
+  }
+}
