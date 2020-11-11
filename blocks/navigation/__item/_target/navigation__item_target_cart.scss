@@ -3,9 +3,14 @@
     grid-area: cart;
 
     &>.navigation__link {
-      border: none;
+      color: #3f48cc;
       &::before {
-
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #138535;
+        font-weight: bold;
         background-image: url(/img/svg/cart-color.svg);
       }
     }

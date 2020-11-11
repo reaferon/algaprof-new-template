@@ -3,8 +3,10 @@
     grid-area: directory;
 
     &>.navigation__link {
+      color: #A349A4;
       &::before {
-        background-image: url(/img/svg/menu-round-color.svg);  
+        background-image: url(/img/svg/menu-round-color.svg);
+        fill: red;
       }
     }
   }

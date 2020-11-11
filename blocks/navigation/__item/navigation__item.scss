@@ -1,10 +1,35 @@
+@keyframes rotation {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (min-width : 320px) {
   .navigation__item {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    
+    a {
+      transition: opacity .5s ease;
+
+      &:hover {
+        opacity: .6;
+
+        &::before {
+          animation: rotation .5s ease;
+          
+        }
+      }
+    }
   }
 }
 

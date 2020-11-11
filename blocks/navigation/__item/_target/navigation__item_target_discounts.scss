@@ -3,6 +3,8 @@
     grid-area: discounts;
     
     &>.navigation__link {
+      color: #ed1c24;
+      
       &::before {
         background-image: url(/img/svg/percentage-color.svg);
       }

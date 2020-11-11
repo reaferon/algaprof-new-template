@@ -3,6 +3,8 @@
     grid-area: delivery;
 
     &>.navigation__link {
+      color: #00a2e8;
+      
       &::before {
         background-image: url(/img/svg/package-color.svg);
       }
