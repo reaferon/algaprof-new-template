@@ -9,5 +9,7 @@
   .header__search {
     grid-area: search;
     display: flex;
+    flex-grow: 1;
+    width: auto;
   }
 }

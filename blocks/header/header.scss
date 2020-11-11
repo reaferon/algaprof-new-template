@@ -13,12 +13,14 @@
 @media (min-width : 1024px) {
   .header {
     grid-area: header;
-    display: grid;
-    width: 100%;
-    grid-template-columns: 200px 200px auto;
-    grid-template-rows:  46px 60px;
-    grid-template-areas:
-      "location search search "
-      "logo title title";
+    display: flex;
+    width: 99%;
+    height: 80px;
+    z-index: 1;
+    // grid-template-columns: 200px 200px auto;
+    // grid-template-rows:   60px;
+    // grid-template-areas:
+    //   "logo search search";
+
   }
 }
