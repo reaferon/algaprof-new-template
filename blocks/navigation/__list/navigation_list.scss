@@ -1,0 +1,20 @@
+@media (min-width : 320px) {
+  .navigation__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+
+    
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__list {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows:  26px 80px;
+    grid-template-areas:
+      ". . . . ."
+      "directory delivery discounts profile cart";
+  }
+}

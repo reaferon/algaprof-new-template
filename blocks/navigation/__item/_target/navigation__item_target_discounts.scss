@@ -1,0 +1,17 @@
+@media (min-width : 320px) {
+  .navigation__item_target_discounts {
+    grid-area: discounts;
+    
+    &>.navigation__link {
+      &::before {
+        background-image: url(/img/svg/percentage-color.svg);
+      }
+    }
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__item_target_discounts {
+
+  }
+}

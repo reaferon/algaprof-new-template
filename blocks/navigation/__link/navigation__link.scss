@@ -1,0 +1,29 @@
+@media (min-width : 320px) {
+  .navigation__link {
+    display: flex;
+    text-decoration: none;
+    font-size: .9em;
+    color: #333;
+    flex-direction: column;
+    text-align: center;
+
+
+    &::before {
+      display: block;
+      content: '';
+      width: 36px;
+      height: 36px;
+      margin: 3px auto 3px auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__link {
+    width: 56px;
+    min-height: 46px;
+  }
+}

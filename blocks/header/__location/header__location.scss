@@ -7,17 +7,20 @@
 
 @media (min-width : 1024px) {
   .header__location {
+    margin: 0;
     display: flex;
     align-items: center;
     text-decoration: underline;
     cursor: pointer;
+    min-height: 46px;
+    font-size: .8em;
 
     &::before {
       display: block;
       width: 18px;
       height: 18px;
       content: '';
-      margin-right: 5px;
+      margin: 0 5px;
       background-image: url(/img/svg/location.svg);
       background-size: cover;
       color: $color_link;

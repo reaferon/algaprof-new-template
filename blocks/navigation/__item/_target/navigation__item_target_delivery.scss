@@ -1,0 +1,17 @@
+@media (min-width : 320px) {
+  .navigation__item_target_delivery {
+    grid-area: delivery;
+
+    &>.navigation__link {
+      &::before {
+        background-image: url(/img/svg/package-color.svg);
+      }
+    }
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__item_target_delivery {
+
+  }
+}

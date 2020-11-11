@@ -1,0 +1,17 @@
+@media (min-width : 320px) {
+  .header__title {
+    grid-area: title;
+    display: none;
+  }
+}
+
+@media (min-width : 1024px) {
+  .header__title {
+    display: flex;
+    align-items: center;
+    font-size: .8em;
+    margin: 0;
+    color: $color__grey-blue_dark;
+    text-align: center;
+  }
+}

@@ -8,13 +8,16 @@
 @media (min-width : 1024px) {
   .header__logo {
     grid-area: logo;
+    min-height: 60px;
+    min-width: 200px;
     display: flex;
-    color: #fff;
+    color: #c0c0c0;
     text-decoration: none;
-    text-shadow: 1px 1px 2px #999;
-    font-size: 1.8em;
-    padding: 0 0 0 20px;
-    align-self: center;
+    text-shadow: 1px 1px 1px  #999;
+    font-size: 1.5em;
+    padding: 0;
+    align-items: center;
+    
     //padding: 0 0 0 10px;
 
     &::before {
@@ -24,8 +27,8 @@
       display: block;
       content: '';
       background-image: url(/img/logo.svg);
-      align-self: flex-start;
-      margin-right: 10px;
+      align-self: center;
+      margin: 0 10px;
     }
     &:hover {
       text-shadow: 1px 1px 1px #2ba6cb;

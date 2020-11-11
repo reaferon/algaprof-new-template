@@ -456,9 +456,9 @@ template {
 
 @media (min-width: 1024px) {
   .body {
-    grid-template-columns: auto 724px 300px auto;
-    grid-template-rows: 106px 0 36px auto 196px;
-    grid-template-areas: ". header nav ." "bg-top bg-top bg-top bg-top" ". title title ." ". main main ." "footer footer footer footer";
+    grid-template-columns: auto 534px 490px auto;
+    grid-template-rows: 106px 0  auto 196px;
+    grid-template-areas: ". header nav ." "bg-top bg-top bg-top bg-top" ". main main ." "footer footer footer footer";
     background: linear-gradient(to top, #f5f1de, #d5f6f4);
   }
 
@@ -476,18 +476,14 @@ template {
 
 @media (min-width: 1280px) {
   .body {
-    grid-template-columns: auto 880px 300px auto;
+    grid-template-columns: auto 790px 490px auto;
   }
 }
 
 @media (min-width: 1440px) {
   .body {
-    grid-template-columns: auto 1140px 300px auto;
+    grid-template-columns: auto 950px 490px auto;
   }
-}
-
-* {
-  outline: 1px solid red;
 }
 
 /* header */
@@ -505,12 +501,13 @@ template {
 
 @media (min-width: 1024px) {
   .header {
+    outline: 1px solid blue;
     grid-area: header;
     display: grid;
     width: 100%;
-    grid-template-columns: 60px 240px 33.33% auto;
+    grid-template-columns: 200px 200px auto;
     grid-template-rows: 46px 60px;
-    grid-template-areas: "location location phone discounts" "directory logo search search";
+    grid-template-areas: "location search search " "logo title title";
   }
 }
 
@@ -523,10 +520,13 @@ template {
 
 @media (min-width: 1024px) {
   .header__location {
+    margin: 0;
     display: flex;
     align-items: center;
     text-decoration: underline;
     cursor: pointer;
+    min-height: 46px;
+    font-size: .8em;
   }
 
   .header__location::before {
@@ -534,7 +534,7 @@ template {
     width: 18px;
     height: 18px;
     content: '';
-    margin-right: 5px;
+    margin: 0 5px;
     background-image: url("../../img/svg/location.svg");
     background-size: cover;
     color: #2ba6cb;
@@ -558,24 +558,29 @@ template {
 
 @media (min-width: 1024px) {
   .header__phone {
+    margin: 0;
     grid-area: phone;
     display: flex;
     align-items: center;
+    min-height: 46px;
   }
 }
 
 @media (min-width: 320px) {
-  .header__discounts {
-    grid-area: discounts;
+  .header__title {
+    grid-area: title;
     display: none;
   }
 }
 
 @media (min-width: 1024px) {
-  .header__discounts {
-    grid-area: discounts;
+  .header__title {
     display: flex;
     align-items: center;
+    font-size: .8em;
+    margin: 0;
+    color: #526579;
+    text-align: center;
   }
 }
 
@@ -602,7 +607,7 @@ template {
 @media (min-width: 1024px) {
   .header__directory {
     grid-area: directory;
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
     font-size: .8em;
@@ -633,13 +638,15 @@ template {
 @media (min-width: 1024px) {
   .header__logo {
     grid-area: logo;
+    min-height: 60px;
+    min-width: 200px;
     display: flex;
-    color: #fff;
+    color: #c0c0c0;
     text-decoration: none;
-    text-shadow: 1px 1px 2px #999;
-    font-size: 1.8em;
-    padding: 0 0 0 20px;
-    align-self: center;
+    text-shadow: 1px 1px 1px  #999;
+    font-size: 1.5em;
+    padding: 0;
+    align-items: center;
   }
 
   .header__logo::before {
@@ -649,8 +656,8 @@ template {
     display: block;
     content: '';
     background-image: url("../../img/logo.svg");
-    align-self: flex-start;
-    margin-right: 10px;
+    align-self: center;
+    margin: 0 10px;
   }
 
   .header__logo:hover {
@@ -714,12 +721,120 @@ template {
 
 @media (min-width: 1024px) {
   .navigation {
-    height: 96px;
+    height: 106px;
     position: relative;
     order: 2;
     width: auto;
     bottom: auto;
     box-shadow: none;
+  }
+}
+
+@media (min-width: 320px) {
+  .navigation__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation__list {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 26px 80px;
+    grid-template-areas: ". . . . ." "directory delivery discounts profile cart";
+  }
+}
+
+@media (min-width: 320px) {
+  .navigation__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 320px) {
+  .navigation__item_target_directory {
+    grid-area: directory;
+  }
+
+  .navigation__item_target_directory > .navigation__link::before {
+    background-image: url("../../img/svg/menu-round-color.svg");
+  }
+}
+
+@media (min-width: 320px) {
+  .navigation__item_target_delivery {
+    grid-area: delivery;
+  }
+
+  .navigation__item_target_delivery > .navigation__link::before {
+    background-image: url("../../img/svg/package-color.svg");
+  }
+}
+
+@media (min-width: 320px) {
+  .navigation__item_target_discounts {
+    grid-area: discounts;
+  }
+
+  .navigation__item_target_discounts > .navigation__link::before {
+    background-image: url("../../img/svg/percentage-color.svg");
+  }
+}
+
+@media (min-width: 320px) {
+  .navigation__item_target_profile {
+    grid-area: profile;
+  }
+
+  .navigation__item_target_profile > .navigation__link::before {
+    background-image: url("../../img/svg/avatar-color.svg");
+  }
+}
+
+@media (min-width: 320px) {
+  .navigation__item_target_cart {
+    grid-area: cart;
+  }
+
+  .navigation__item_target_cart > .navigation__link {
+    border: none;
+  }
+
+  .navigation__item_target_cart > .navigation__link::before {
+    background-image: url("../../img/svg/cart-color.svg");
+  }
+}
+
+@media (min-width: 320px) {
+  .navigation__link {
+    display: flex;
+    text-decoration: none;
+    font-size: .9em;
+    color: #333;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navigation__link::before {
+    display: block;
+    content: '';
+    width: 36px;
+    height: 36px;
+    margin: 3px auto 3px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation__link {
+    width: 56px;
+    min-height: 46px;
   }
 }
 

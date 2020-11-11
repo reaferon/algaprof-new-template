@@ -17,13 +17,12 @@
 
 @media (min-width : 1024px) {
   .body {
-    grid-template-columns: auto 724px 300px auto;
-    grid-template-rows:  106px 0 36px auto 196px;
+    grid-template-columns: auto 534px 490px auto;
+    grid-template-rows:  106px 0  auto 196px;
     grid-template-areas:
 
       ". header nav ."
       "bg-top bg-top bg-top bg-top"
-      ". title title ."
       ". main main ."
       "footer footer footer footer"
       ;
@@ -43,15 +42,12 @@
 }
 @media (min-width : 1280px) {
   .body {
-    grid-template-columns: auto 880px 300px auto;
+    grid-template-columns: auto 790px 490px auto;
   }
 }
 
 @media (min-width : 1440px) {
   .body {
-    grid-template-columns: auto 1140px 300px auto;
+    grid-template-columns: auto 950px 490px auto;
   }
-}
-* {
-  outline: 1px solid red;
 }

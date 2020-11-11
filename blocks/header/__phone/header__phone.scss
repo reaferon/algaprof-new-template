@@ -7,8 +7,10 @@
 
 @media (min-width : 1024px) {
   .header__phone {
+    margin: 0;
     grid-area: phone;
     display: flex;
     align-items: center;
+    min-height: 46px;
   }
 }

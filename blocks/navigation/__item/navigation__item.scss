@@ -1,0 +1,15 @@
+@media (min-width : 320px) {
+  .navigation__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__item {
+
+  }
+}

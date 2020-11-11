@@ -12,13 +12,14 @@
 
 @media (min-width : 1024px) {
   .header {
+    outline: 1px solid blue;
     grid-area: header;
     display: grid;
     width: 100%;
-    grid-template-columns: 60px 240px 33.33% auto;
+    grid-template-columns: 200px 200px auto;
     grid-template-rows:  46px 60px;
     grid-template-areas:
-      "location location phone discounts"
-      "directory logo search search";
+      "location search search "
+      "logo title title";
   }
 }

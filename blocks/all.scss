@@ -12,7 +12,7 @@
 @import "./header/header.scss";
 @import "./header/__location/header__location.scss";
 @import "./header/__phone/header__phone.scss";
-@import "./header/__discounts/header__discounts.scss";
+@import "./header/__title/header__title.scss";
 @import "./header/__directory/header__directory.scss";
 @import "./header/__logo/header__logo.scss";
 @import "./header/__search/header__search.scss";
@@ -20,6 +20,14 @@
 @import "./title/title.scss";
 /* navigation */
 @import "./navigation/navigation.scss";
+@import "./navigation/__list/navigation_list.scss";
+@import "./navigation/__item/navigation__item.scss";
+@import "./navigation/__item/_target/navigation__item_target_directory.scss";
+@import "./navigation/__item/_target/navigation__item_target_delivery.scss";
+@import "./navigation/__item/_target/navigation__item_target_discounts.scss";
+@import "./navigation/__item/_target/navigation__item_target_profile.scss";
+@import "./navigation/__item/_target/navigation__item_target_cart.scss";
+@import "./navigation/__link/navigation__link.scss";
 /* main */
 @import "./main/main.scss";
 /* footer */

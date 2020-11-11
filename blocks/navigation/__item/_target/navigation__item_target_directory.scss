@@ -1,0 +1,17 @@
+@media (min-width : 320px) {
+  .navigation__item_target_directory {
+    grid-area: directory;
+
+    &>.navigation__link {
+      &::before {
+        background-image: url(/img/svg/menu-round-color.svg);  
+      }
+    }
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__item_target_directory {
+
+  }
+}
