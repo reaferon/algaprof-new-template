@@ -1,3 +1,22 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
 @keyframes search_show {
   from {width: 48px;}
   to {width: 100%;}

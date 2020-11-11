@@ -10,12 +10,12 @@
 
 /* header */
 @import "./header/header.scss";
-@import "./header/__location/header__location.scss";
-@import "./header/__phone/header__phone.scss";
-@import "./header/__title/header__title.scss";
-@import "./header/__directory/header__directory.scss";
 @import "./header/__logo/header__logo.scss";
 @import "./header/__search/header__search.scss";
+@import "./header/__search-label/header__search-label.scss";
+@import "./header/__search-label/_active/header__search-label_active.scss";
+@import "./header/__search-input/header__search-input.scss";
+@import "./header/__search-button/header__search-button.scss";
 /* title */
 @import "./title/title.scss";
 @import "./title/__name/title__name.scss";
@@ -33,3 +33,7 @@
 @import "./main/main.scss";
 /* footer */
 @import "./footer/footer.scss";
+
+/* helpers */
+@import "./overlay/overlay.scss";
+@import "./overlay/_active/overlay_active.scss";

@@ -1,26 +1,16 @@
 @media (min-width : 320px) {
   .header {
     grid-area: header;
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: 48px;
-    grid-template-rows:  48px;
-    grid-template-areas:
-      "directory";
   }
 }
 
 @media (min-width : 1024px) {
   .header {
-    grid-area: header;
     display: flex;
     width: 99%;
     height: 80px;
     z-index: 1;
-    // grid-template-columns: 200px 200px auto;
-    // grid-template-rows:   60px;
-    // grid-template-areas:
-    //   "logo search search";
-
   }
 }

@@ -1,0 +1,35 @@
+@media (min-width : 320px) {
+  .header__search-label {
+    z-index: 60;
+    position: fixed;
+    display: flex;
+    height: 300px;
+    max-height: 300px;
+    width: 100%;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    transition: -webkit-transform 0.3s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 5px;
+  }
+}
+
+@media (min-width : 1024px) {
+  .header__search-label {
+    display: flex;
+    position: relative;
+    height: auto;
+    max-height: auto;
+    width: 100%;    
+    -webkit-transform: none;
+    transform: none;
+    transition: none;
+    background: transparent;
+    top: auto;
+    left: auto;
+  }
+}

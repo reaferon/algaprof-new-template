@@ -2,17 +2,18 @@
   .navigation__link {
     display: flex;
     text-decoration: none;
-    font-size: .9em;
+    font-size: .8em;
     color: #333;
     flex-direction: column;
     text-align: center;
-
-
+    width: 56px;
+    min-height: 46px;
+    
     &::before {
       display: block;
       content: '';
-      width: 36px;
-      height: 36px;
+      width: 24px;
+      height: 24px;
       margin: 3px auto 3px auto;
       background-repeat: no-repeat;
       background-position: center center;
@@ -23,7 +24,11 @@
 
 @media (min-width : 1024px) {
   .navigation__link {
-    width: 56px;
-    min-height: 46px;
+    font-size: .9em;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+    }
   }
 }
