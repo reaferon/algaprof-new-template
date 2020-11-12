@@ -3,8 +3,7 @@
     z-index: 60;
     position: fixed;
     display: flex;
-    height: 300px;
-    max-height: 300px;
+    flex-wrap: wrap;
     width: 100%;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);

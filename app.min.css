@@ -609,8 +609,7 @@ template {
     z-index: 60;
     position: fixed;
     display: flex;
-    height: 300px;
-    max-height: 300px;
+    flex-wrap: wrap;
     width: 100%;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
@@ -692,6 +691,36 @@ template {
     content: '';
     background-image: url("../../img/svg/search.svg");
     background-size: cover;
+  }
+}
+
+@media (min-width: 320px) {
+  .header__search-queries {
+    width: 310px;
+    outline: 1px solid red;
+  }
+}
+
+@media (min-width: 320px) {
+  .header__search-queries-close {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__search-queries-close span {
+    border: 1px solid #666;
+    padding: 5px 10px;
+    display: flex;
+  }
+
+  .header__search-queries-close span::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    content: '';
+    background-image: url("../../img/svg/cancel.svg");
   }
 }
 
