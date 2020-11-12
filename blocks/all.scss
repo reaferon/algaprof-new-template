@@ -33,6 +33,15 @@
 @import "./main/main.scss";
 /* footer */
 @import "./footer/footer.scss";
+@import "./footer/__column/footer__column.scss";
+@import "./footer/__list/footer__list.scss";
+@import "./footer/__item/footer__item.scss";
+@import "./footer/__item/_type/footer__item_type_logo.scss";
+@import "./footer/__item/_type/footer__item_type_location.scss";
+@import "./footer/__item/_type/footer__item_type_phone.scss";
+@import "./footer/__item/_type/footer__item_type_whatsapp.scss";
+@import "./footer/__item/_type/footer__item_type_email.scss";
+@import "./footer/__link/footer__link.scss";
 
 /* helpers */
 @import "./overlay/overlay.scss";

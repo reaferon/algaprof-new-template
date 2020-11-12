@@ -9,8 +9,8 @@ var sass = require('gulp-sass');
 
 
 gulp.task('default', function () {
-    //gulp.watch('js/*.js', gulp.series('js_task'));
     gulp.watch(['vendor/*.css','helpers/*.scss', 'blocks/**/*.scss'], gulp.series('css_task'));
+    gulp.watch(['helpers/**/*.js', 'blocks/**/*.js'], gulp.series('js_task'));
     //return gulp.watch('dist/scss/*.scss', gulp.series('spatonika_css'));
 });
 
@@ -37,7 +37,8 @@ gulp.task('css_task', function (done) {
 gulp.task('js_task', function (done) {
     var notify = require('gulp-notify');
     return gulp.src([
-        'js/*.js'
+        'blocks/**/*.js',
+        'helpers/**/*.js'
     ])
         .pipe(concat('app.js'))
         .pipe(rename('app.min.js'))

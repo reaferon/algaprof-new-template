@@ -1,0 +1,8 @@
+@media (min-width : 1024px) {
+  .footer__item_type_phone {
+
+    &::before {
+      background-image: url(/img/svg/phone-call.svg);
+    }
+  }
+}

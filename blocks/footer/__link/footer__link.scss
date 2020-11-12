@@ -1,0 +1,11 @@
+@media (min-width : 1024px) {
+  .footer__link {
+    color: $color_link;
+    transition: opacity .5s ease;
+    text-decoration: none;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}

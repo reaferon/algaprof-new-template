@@ -935,6 +935,99 @@ template {
   }
 }
 
+@media (min-width: 1024px) {
+  .footer__column {
+    min-width: 1024px;
+    margin: 0 auto;
+    padding: 10px 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer__column {
+    min-width: 1280px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__column {
+    min-width: 1440px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__list {
+    margin: 0 0 0 10px;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__item {
+    padding: 7px 0;
+    display: flex;
+  }
+
+  .footer__item::before {
+    width: 24px;
+    height: 24px;
+    content: '';
+    margin-right: 5px;
+    opacity: .5;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__item_type_logo {
+    font-size: 1.2em;
+  }
+
+  .footer__item_type_logo::before {
+    background-image: url("../../img/logo.svg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__item_type_location::before {
+    background-image: url("../../img/svg/location.svg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__item_type_phone::before {
+    background-image: url("../../img/svg/phone-call.svg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__item_type_whatsapp::before {
+    background-image: url("../../img/svg/smartphone-1.svg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__item_type_email::before {
+    background-image: url("../../img/svg/mail.svg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__link {
+    color: #2ba6cb;
+    transition: opacity .5s ease;
+    text-decoration: none;
+  }
+
+  .footer__link:hover {
+    opacity: .6;
+  }
+}
+
 /* helpers */
 
 .overlay {

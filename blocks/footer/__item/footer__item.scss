@@ -1,0 +1,15 @@
+@media (min-width : 1024px) {
+  .footer__item {
+    padding: 7px 0;
+    display: flex;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      content: '';
+      margin-right: 5px;
+      opacity: .5;
+      background-size: cover;
+    }
+  }
+}

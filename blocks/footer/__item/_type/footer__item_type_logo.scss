@@ -1,0 +1,9 @@
+@media (min-width : 1024px) {
+  .footer__item_type_logo {
+    font-size: 1.2em;
+
+    &::before {
+      background-image: url(/img/logo.svg);
+    }
+  }
+}
