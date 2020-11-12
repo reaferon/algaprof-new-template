@@ -3,7 +3,7 @@
     flex-grow: 1;
     box-sizing: border-box;
     display: block;
-    width: 50%;
+    width: 100%;
     border-width: 1px;
     border-style: solid;
     padding: 16px;
@@ -13,8 +13,9 @@
     background: #fff;
     border-color: #bbb;
     color: #555;
-    border-radius: 5px;
+    border-radius: 3px;
     height: 36px;
+    margin: 0;
 
     &:focus {
       border-color: #888;

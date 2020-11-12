@@ -7,15 +7,16 @@
 
 /* own */
 @import "./body/body.scss";
-
+ 
 /* header */
 @import "./header/header.scss";
 @import "./header/__logo/header__logo.scss";
 @import "./header/__search/header__search.scss";
-@import "./header/__search-label/header__search-label.scss";
-@import "./header/__search-label/_active/header__search-label_active.scss";
+@import "./header/__search-fieldset/header__search-fieldset.scss";
+@import "./header/__search-fieldset/_active/header__search-fieldset_active.scss";
 @import "./header/__search-input/header__search-input.scss";
 @import "./header/__search-button/header__search-button.scss";
+@import "./header/__search-label/header__search-label.scss";
 @import "./header/__search-queries/header__search-queries.scss";
 @import "./header/__search-queries-close/header__search-queries-close.scss";
 /* title */

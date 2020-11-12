@@ -1,6 +1,8 @@
 @media (min-width : 320px) {
-  .header__search-label_active {
+  .header__search-fieldset_active {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
+    //position: absolute;
+    //min-height: 200px;
   }
 }

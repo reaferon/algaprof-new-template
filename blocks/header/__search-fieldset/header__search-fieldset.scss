@@ -1,5 +1,5 @@
 @media (min-width : 320px) {
-  .header__search-label {
+  .header__search-fieldset {
     z-index: 60;
     position: fixed;
     display: flex;
@@ -11,14 +11,16 @@
     background: #ffffff;
     top: 0;
     left: 0;
-    overflow: auto;
+    //overflow: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 5px;
+    padding: 0;
+    border: none;
+
   }
 }
 
 @media (min-width : 1024px) {
-  .header__search-label {
+  .header__search-fieldset {
     display: flex;
     position: relative;
     height: auto;
