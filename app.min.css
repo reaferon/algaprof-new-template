@@ -392,6 +392,16 @@ template {
   }
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes search_show {
   from {
     width: 48px;
@@ -568,6 +578,10 @@ template {
   .header__logo:hover {
     text-shadow: 1px 1px 1px #2ba6cb;
   }
+
+  .header__logo:hover::before {
+    animation: pulse 1.2s ease-in-out;
+  }
 }
 
 @media (min-width: 320px) {
@@ -716,7 +730,7 @@ template {
     font-size: .8em;
     display: flex;
     align-items: center;
-    color: #666;
+    color: #333;
     padding: 5px 10px;
   }
 }
@@ -804,7 +818,6 @@ template {
 
   .navigation__item_target_directory > .navigation__link::before {
     background-image: url("../../img/svg/menu-round-color.svg");
-    fill: red;
   }
 }
 
@@ -993,6 +1006,25 @@ template {
   }
 }
 
+@media (min-width: 1024px) {
+  .navigation__directory-link {
+    font-size: 1.2em;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+  }
+
+  .navigation__directory-link:hover {
+    background-size: 100% 2px;
+    transition: background-size .3s ease;
+  }
+
+  .navigation__directory-link:hover {
+    color: #138535;
+  }
+}
+
 /* main */
 
 @media (min-width: 320px) {
@@ -1107,13 +1139,17 @@ template {
 
 @media (min-width: 1024px) {
   .footer__link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
     color: #2ba6cb;
-    transition: opacity .5s ease;
     text-decoration: none;
   }
 
   .footer__link:hover {
-    opacity: .6;
+    background-size: 100% 1px;
+    transition: background-size .3s ease;
   }
 }
 

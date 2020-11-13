@@ -3,7 +3,7 @@
     grid-area: profile;
 
     &>.navigation__link {
-      color: #138535;
+      color: $color_green;
 
       &::before {
         background-image: url(/img/svg/avatar-color.svg);

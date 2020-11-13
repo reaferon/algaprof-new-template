@@ -1,11 +1,7 @@
 @media (min-width : 1024px) {
   .footer__link {
+    @include animated-underline(1px);
     color: $color_link;
-    transition: opacity .5s ease;
     text-decoration: none;
-
-    &:hover {
-      opacity: .6;
-    }
   }
 }

@@ -1,13 +1,23 @@
 @media (min-width : 320px) {
   .navigation__directory-link {
     text-decoration: none;
-    color: #333;
-    
+    color: $color__grey-blue_dark;
+
+
   }
 }
 
 @media (min-width : 1024px) {
   .navigation__directory-link {
+    font-size: 1.2em;
+    @include animated-underline();
+
+
+    
+    &:hover {
+      color: $color_green;
+    }
+
 
   }
 }

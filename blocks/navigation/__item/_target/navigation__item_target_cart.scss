@@ -3,7 +3,7 @@
     grid-area: cart;
 
     &>.navigation__link {
-      color: #3f48cc;
+      color: $color_blue;
       &::before {
         content: '';
         display: flex;

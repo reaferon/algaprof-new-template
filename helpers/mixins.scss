@@ -8,3 +8,15 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin animated-underline($height: 2px) {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% $height;
+
+  &:hover {
+    background-size: 100% $height;
+    transition: background-size .3s ease;
+  }
+}
