@@ -16,9 +16,7 @@
 @import "./header/__search-fieldset/_active/header__search-fieldset_active.scss";
 @import "./header/__search-input/header__search-input.scss";
 @import "./header/__search-button/header__search-button.scss";
-@import "./header/__search-label/header__search-label.scss";
-@import "./header/__search-queries/header__search-queries.scss";
-@import "./header/__search-queries-close/header__search-queries-close.scss";
+
 /* title */
 @import "./title/title.scss";
 @import "./title/__name/title__name.scss";
@@ -32,6 +30,11 @@
 @import "./navigation/__item/_target/navigation__item_target_profile.scss";
 @import "./navigation/__item/_target/navigation__item_target_cart.scss";
 @import "./navigation/__link/navigation__link.scss";
+@import "./navigation/__directory/navigation__directory.scss";
+@import "./navigation/__directory/_active/navigation__directory_active.scss";
+@import "./navigation/__directory-item/navigation__directory-item.scss";
+@import "./navigation/__directory-item/_type/navigation__directory-item_type_header.scss";
+@import "./navigation/__directory-link/navigation__directory-link.scss";
 /* main */
 @import "./main/main.scss";
 /* footer */

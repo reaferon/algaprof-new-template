@@ -1,0 +1,25 @@
+@media (min-width : 320px) {
+  .navigation__directory-item_type_header {
+    padding: 10px;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 10px;
+
+    &::after {
+      width: 24px;
+      height: 24px;
+      content: '';
+      background-image: url(/img/svg/cancel.svg);
+      background-size: cover;
+      opacity: .7;
+    }
+  }
+}
+
+@media (min-width : 1024px) {
+
+}

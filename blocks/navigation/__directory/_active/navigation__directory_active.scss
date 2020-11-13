@@ -1,0 +1,14 @@
+@media (min-width : 320px) {
+  .navigation__directory_active {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__directory_active {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: -2px 0 5px #999;
+  }
+}

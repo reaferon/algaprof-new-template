@@ -1,0 +1,32 @@
+@media (min-width : 320px) {
+  .navigation__directory {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 65;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap;
+    width: 100vw;
+    height: calc(100vh - 48px);
+    overflow-y: auto;
+    -webkit-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+    transition: -webkit-transform 0.3s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    //overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__directory {
+    width: 500px;
+    height: 100vh;
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+  }
+}
