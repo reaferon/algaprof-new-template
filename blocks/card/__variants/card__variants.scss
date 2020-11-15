@@ -1,0 +1,11 @@
+@media (min-width : 320px) {
+  .card__variants {
+    margin: 0 0 5px 5px;
+    padding: 0;
+    width: calc(100% - 100px);
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

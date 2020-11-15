@@ -53,3 +53,15 @@
 @import "./overlay/overlay.scss";
 @import "./overlay/_active/overlay_active.scss";
 
+/* card */
+@import "./bestsellers/bestsellers.scss";
+@import "./cards/cards.scss";
+@import "./card/card.scss";
+@import "./card/_margin/card_margin.scss";
+@import "./card/__title/card__title.scss";
+@import "./card/__image/card__image.scss";
+@import "./card/__price/card__price.scss";
+@import "./card/__variants/card__variants.scss";
+@import "./card/__variant/card__variant.scss";
+@import "./card/__variant/_active/card__variant_active.scss";
+@import "./card/__add2cart/card__add2cart.scss";

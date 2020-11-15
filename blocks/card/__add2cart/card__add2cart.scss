@@ -1,0 +1,34 @@
+@media (min-width : 320px) {
+  .card__add2cart {
+    margin: 0 5px 5px 0;
+    padding: 3px 5px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid $color__grey_light;
+    background: linear-gradient(#62CF89, #00b140);
+    // background: linear-gradient(#73BBFE, #4E99FF); - blue
+    // background: linear-gradient(#FDFDFD, #F0F0F0); - grey
+    // background: linear-gradient(#e5a6ff, #c644fc); - violet
+    outline: none;
+    color: #fff;
+    
+
+    &:hover {
+      background: linear-gradient(#00b140, #62CF89);
+      cursor: pointer;
+    }
+
+    &::before {
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: '';
+      margin-right: 3px;
+      background-image: url(/img/svg/cart.svg);
+      @include svg-invert();
+    }
+  }
+}

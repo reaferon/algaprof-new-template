@@ -1,0 +1,10 @@
+@media (min-width : 320px) {
+  .card__variant {
+    width: 30%;
+    color: $color_link;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+  }
+}

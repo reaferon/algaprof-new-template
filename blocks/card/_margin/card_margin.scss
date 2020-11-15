@@ -1,0 +1,38 @@
+@media (min-width : 320px) {
+  .card_margin {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width : 768px) {
+  .card_margin {
+    margin-right: 10px;
+
+    &:nth-of-type(2) {
+      margin-right: 0;
+    }
+  }
+}
+@media (min-width : 1024px) {
+  .card_margin {
+
+    &:nth-of-type(2) {
+      margin-right: 10px;
+    }
+    
+    &:nth-of-type(3) {
+      margin-right: 0px;
+    }
+  }
+}
+@media (min-width : 1200px) {
+  .card_margin {
+
+    &:nth-of-type(3) {
+      margin-right: 10px;
+    }
+    
+    &:nth-of-type(4) {
+      margin-right: 0px;
+    }
+  }
+}

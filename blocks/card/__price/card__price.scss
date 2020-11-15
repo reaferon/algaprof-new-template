@@ -1,0 +1,11 @@
+@media (min-width : 320px) {
+  .card__price {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: $color_green;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 3px 5px;
+  }
+}

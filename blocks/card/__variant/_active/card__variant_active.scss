@@ -1,0 +1,15 @@
+@media (min-width : 320px) {
+  .card__variant_active {
+    color: $color_green;
+    
+
+    &::before {
+      content: '•';
+      font-size: 1em;
+      width: 12px;
+      height: 12px;
+      line-height: 12px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@media (min-width : 320px) {
+  .card__title {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    height: 30px;
+    background-color: #fff;
+    text-decoration: none;
+    color: $color__grey_dark;
+    box-sizing: border-box;
+    padding: 3px 5px;
+  }
+}

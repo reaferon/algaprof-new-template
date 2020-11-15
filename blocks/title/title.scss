@@ -1,6 +1,7 @@
 @media (min-width : 320px) {
   .title {
      grid-area: title;
+     display: flex;
     // margin: 0;
     // padding: 0;
     // font-size: .8em;
@@ -14,7 +15,7 @@
 }
 @media (min-width : 1024px) {
   .title {
-    display: flex;
+    
     height: 30px;
 
 
