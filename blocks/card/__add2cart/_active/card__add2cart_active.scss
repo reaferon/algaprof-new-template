@@ -1,0 +1,13 @@
+@media (min-width : 320px) {
+  .card__add2cart_active {
+    background: linear-gradient(#62CF89, #00b140);
+    &::before {
+      background-image: url(/img/svg/cart-full.svg);
+    }
+
+    &:hover {
+      background: linear-gradient(#00b140, #62CF89);
+      cursor: pointer;
+    }
+  }
+}

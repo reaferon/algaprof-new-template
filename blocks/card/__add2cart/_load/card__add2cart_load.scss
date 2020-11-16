@@ -1,0 +1,8 @@
+@media (min-width : 320px) {
+  .card__add2cart_load {
+    &::before {
+      animation: rotation 1s linear infinite;
+      background-image: url(/img/svg/loading-1.svg);
+    }
+  }
+}

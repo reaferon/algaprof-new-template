@@ -4,12 +4,7 @@
     
 
     &::before {
-      content: '•';
-      font-size: 1em;
-      width: 12px;
-      height: 12px;
-      line-height: 12px;
-      text-align: center;
+      color: $color_green;
     }
   }
 }

@@ -8,8 +8,8 @@
     align-items: center;
     border-radius: 5px;
     border: 1px solid $color__grey_light;
-    background: linear-gradient(#62CF89, #00b140);
-    // background: linear-gradient(#73BBFE, #4E99FF); - blue
+    
+    background: linear-gradient(#73BBFE, #4E99FF); //- blue
     // background: linear-gradient(#FDFDFD, #F0F0F0); - grey
     // background: linear-gradient(#e5a6ff, #c644fc); - violet
     outline: none;
@@ -17,7 +17,8 @@
     
 
     &:hover {
-      background: linear-gradient(#00b140, #62CF89);
+      //background: linear-gradient(#00b140, #62CF89);
+      background: linear-gradient(#4E99FF, #73BBFE);
       cursor: pointer;
     }
 
@@ -30,5 +31,7 @@
       background-image: url(/img/svg/cart.svg);
       @include svg-invert();
     }
+
+
   }
 }

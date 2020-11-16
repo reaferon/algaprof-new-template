@@ -1,0 +1,24 @@
+@media (min-width : 320px) {
+  .navigation__item_target_cart-full {
+    grid-area: cart;
+
+    &>.navigation__link {
+      color: $color_blue;
+      &::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #138535;
+        font-weight: bold;
+        background-image: url(/img/svg/cart-full-color.svg);
+      }
+    }
+  }
+}
+
+@media (min-width : 1024px) {
+  .navigation__item_target_cart {
+
+  }
+}

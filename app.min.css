@@ -898,6 +898,26 @@ template {
 }
 
 @media (min-width: 320px) {
+  .navigation__item_target_cart-full {
+    grid-area: cart;
+  }
+
+  .navigation__item_target_cart-full > .navigation__link {
+    color: #3f48cc;
+  }
+
+  .navigation__item_target_cart-full > .navigation__link::before {
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #138535;
+    font-weight: bold;
+    background-image: url("../../img/svg/cart-full-color.svg");
+  }
+}
+
+@media (min-width: 320px) {
   .navigation__link {
     display: flex;
     text-decoration: none;
@@ -1288,7 +1308,7 @@ template {
     text-decoration: none;
     color: #333;
     box-sizing: border-box;
-    padding: 3px 5px;
+    padding: 10px 5px 10px 10px;
   }
 }
 
@@ -1333,6 +1353,16 @@ template {
     align-items: center;
     cursor: pointer;
   }
+
+  .card__variant::before {
+    content: '•';
+    font-size: 1em;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #fff;
+  }
 }
 
 @media (min-width: 320px) {
@@ -1341,12 +1371,7 @@ template {
   }
 
   .card__variant_active::before {
-    content: '•';
-    font-size: 1em;
-    width: 12px;
-    height: 12px;
-    line-height: 12px;
-    text-align: center;
+    color: #138535;
   }
 }
 
@@ -1360,13 +1385,13 @@ template {
     align-items: center;
     border-radius: 5px;
     border: 1px solid #999;
-    background: linear-gradient(#62CF89, #00b140);
+    background: linear-gradient(#73BBFE, #4E99FF);
     outline: none;
     color: #fff;
   }
 
   .card__add2cart:hover {
-    background: linear-gradient(#00b140, #62CF89);
+    background: linear-gradient(#4E99FF, #73BBFE);
     cursor: pointer;
   }
 
@@ -1379,5 +1404,27 @@ template {
     background-image: url("../../img/svg/cart.svg");
     -webkit-filter: invert(100%);
     filter: invert(100%);
+  }
+}
+
+@media (min-width: 320px) {
+  .card__add2cart_active {
+    background: linear-gradient(#62CF89, #00b140);
+  }
+
+  .card__add2cart_active::before {
+    background-image: url("../../img/svg/cart-full.svg");
+  }
+
+  .card__add2cart_active:hover {
+    background: linear-gradient(#00b140, #62CF89);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 320px) {
+  .card__add2cart_load::before {
+    animation: rotation 1s linear infinite;
+    background-image: url("../../img/svg/loading-1.svg");
   }
 }

@@ -29,6 +29,7 @@
 @import "./navigation/__item/_target/navigation__item_target_discounts.scss";
 @import "./navigation/__item/_target/navigation__item_target_profile.scss";
 @import "./navigation/__item/_target/navigation__item_target_cart.scss";
+@import "./navigation/__item/_target/navigation__item_target_cart-full.scss";
 @import "./navigation/__link/navigation__link.scss";
 @import "./navigation/__directory/navigation__directory.scss";
 @import "./navigation/__directory/_active/navigation__directory_active.scss";
@@ -65,3 +66,5 @@
 @import "./card/__variant/card__variant.scss";
 @import "./card/__variant/_active/card__variant_active.scss";
 @import "./card/__add2cart/card__add2cart.scss";
+@import "./card/__add2cart/_active/card__add2cart_active.scss";
+@import "./card/__add2cart/_load/card__add2cart_load.scss";
