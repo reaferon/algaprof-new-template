@@ -531,8 +531,8 @@ template {
 @media (min-width: 1024px) {
   .body {
     grid-template-columns: auto 534px 490px auto;
-    grid-template-rows: 80px 0px 0px 30px  auto 196px;
-    grid-template-areas: ". header nav ." "bg-top bg-top bg-top bg-top" "bg-bottom bg-bottom bg-bottom bg-bottom" ". title title ." ". main main ." "footer footer footer footer";
+    grid-template-rows: 80px 0 0 30px  auto 196px;
+    grid-template-areas: ". header nav ." "bg-top bg-top bg-top bg-top" "bg-bottom bg-bottom bg-bottom bg-bottom" ". title title ." "main main main main" "footer footer footer footer";
   }
 
   .body::before {
@@ -563,7 +563,7 @@ template {
 
 @media (min-width: 1440px) {
   .body {
-    grid-template-columns: auto 950px 490px auto;
+    grid-template-columns: auto 930px 490px auto;
   }
 }
 
@@ -1098,6 +1098,7 @@ template {
 @media (min-width: 1024px) {
   .main {
     padding-bottom: 20px;
+    width: 100%;
   }
 }
 
@@ -1115,6 +1116,7 @@ template {
     display: flex;
     background: url("../../img/stripes.png") top left repeat-x #dadada;
     box-shadow: 0 -2px 5px #999;
+    height: 196px;
   }
 }
 
@@ -1151,7 +1153,7 @@ template {
 
 @media (min-width: 1024px) {
   .footer__item {
-    padding: 7px 0;
+    padding: 4px 0;
     display: flex;
   }
 
@@ -1239,9 +1241,8 @@ template {
 
 @media (min-width: 320px) {
   .bestsellers {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 100%;
     display: block;
   }
 }
@@ -1250,7 +1251,7 @@ template {
   .cards {
     list-style-type: none;
     margin: 0;
-    padding: 10px 10px;
+    padding: 10px 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1259,7 +1260,23 @@ template {
 
 @media (min-width: 768px) {
   .cards {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    gap: 10px;
+    margin: 0 auto;
+    width: calc(100% - 10px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: calc(33.3333% - 10px) calc(33.3333% - 10px) calc(33.3333% - 10px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .cards {
+    grid-template-columns: calc(25% - 12px) calc(25% - 12px) calc(25% - 12px) calc(25% - 12px);
   }
 }
 
@@ -1269,7 +1286,6 @@ template {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    width: calc(100% - 5px);
     border: 1px solid #dadada;
     border-radius: 3px;
     box-shadow: 0px 0px 1px #999;
@@ -1278,24 +1294,6 @@ template {
 
   .card:hover {
     box-shadow: 1px 1px 2px #dadada;
-  }
-}
-
-@media (min-width: 768px) {
-  .card {
-    width: calc(50% - 10px);
-  }
-}
-
-@media (min-width: 1024px) {
-  .card {
-    width: calc(33.3333% - 10px);
-  }
-}
-
-@media (min-width: 1200px) {
-  .card {
-    width: calc(25% - 10px);
   }
 }
 
