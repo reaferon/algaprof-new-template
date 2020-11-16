@@ -28,7 +28,10 @@ for (var i = 0; i < card__variants.length; i++) {
   //this.classList.remove('card__variant_active');
   card__variants[i].onclick = function(e){
     e.target.closest(".card").querySelector(".card__price").innerHTML = this.getAttribute('data-price') + ' руб';
+    //e.target.closest(".card").querySelector(".card__image").setAttribute('src', this.getAttribute('data-image'));
+    e.target.closest(".card").querySelector(".card__image").style.animation = 'fade_out 1.2s ease-in-out';
     e.target.closest(".card").querySelector(".card__image").setAttribute('src', this.getAttribute('data-image'));
+    e.target.closest(".card").querySelector(".card__image").style.animation = 'fade_in 1.2s ease-in-out';
     e.target.closest(".card").querySelector(".card__add2cart").setAttribute('data-item', this.getAttribute('data-item'));
     
     let all_children_variants = e.target.closest(".card").querySelectorAll(".card__variant");

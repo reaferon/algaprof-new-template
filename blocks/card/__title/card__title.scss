@@ -2,7 +2,8 @@
   .card__title {
     margin: 0;
     padding: 0;
-    width: 100%;
+    //width: inherit;
+    flex-grow: 1;
     display: block;
     height: 30px;
     background-color: #fff;
@@ -10,5 +11,7 @@
     color: $color__grey_dark;
     box-sizing: border-box;
     padding: 10px 5px 10px 10px;
+    //outline: 1px solid red;
+    //position: absolute;
   }
 }

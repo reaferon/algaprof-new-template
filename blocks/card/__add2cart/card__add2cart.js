@@ -18,6 +18,7 @@ for (var i = 0; i < card__add2carts.length; i++) {
       }
 
       button.classList.add('card__add2cart_active');
+      document.querySelector(".navigation__item_target_cart").style.animation = 'pulse 1.2s ease-in-out 3';
     }
     
 
