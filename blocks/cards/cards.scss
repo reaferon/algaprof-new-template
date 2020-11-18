@@ -16,7 +16,7 @@
     // padding:0;
     // outline: 1px solid red;
     display: grid;
-    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    grid-template-columns: repeat(2, calc(50% - 10px));
     gap: 10px;
     margin: 0 auto;
     //padding: 10px;
@@ -28,11 +28,11 @@
 }
 @media (min-width : 1024px) {
   .cards {
-    grid-template-columns: calc(33.3333% - 10px) calc(33.3333% - 10px) calc(33.3333% - 10px);
+    grid-template-columns: repeat(3, calc(33.3333% - 10px));
   }
 }
-@media (min-width : 1280px) {
+@media (min-width : 1280px) { 
   .cards {
-    grid-template-columns: calc(25% - 12px) calc(25% - 12px) calc(25% - 12px) calc(25% - 12px);
+    grid-template-columns: repeat(4, calc(25% - 10px));
   }
 }
