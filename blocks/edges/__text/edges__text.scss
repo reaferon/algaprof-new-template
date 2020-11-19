@@ -1,0 +1,20 @@
+@media (min-width : 320px) {
+  .edges__text {
+    padding: 0px 30px 5px 30px;
+    //font-size: 1.2em;
+
+    &::before {
+      display: block;
+      width: 143px;
+      height: 143px;
+      content: '';
+      margin: 0 auto 10px auto;
+      background-image: url(/img/edges.png);
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      box-shadow: 2px 2px 2px #c0c0c0;
+      //background-size: 250px 250px;
+      //background-size: cover;
+    }
+  }
+}

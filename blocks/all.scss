@@ -68,3 +68,14 @@
 @import "./card/__add2cart/card__add2cart.scss";
 @import "./card/__add2cart/_active/card__add2cart_active.scss";
 @import "./card/__add2cart/_load/card__add2cart_load.scss";
+
+@import "./review/review.scss";
+@import "./review/__wrapper/review__wrapper.scss";
+
+@import "./edges/edges.css";
+@import "./edges/__title/eges__title.scss";
+@import "./edges/__text/edges__text.scss";
+@import "./edges/__text/_type/edges__text_type_effektivnost.scss";
+@import "./edges/__text/_type/edges__text_type_kachestvo.scss";
+@import "./edges/__text/_type/edges__text_type_organichnost.scss";
+@import "./edges/__text/_type/edges__text_type_tsena.scss";

@@ -380,6 +380,30 @@ template {
   display: none;
 }
 
+@media (min-width : 320px) {
+  .edges {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width : 1024px) {
+  .edges {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width : 1280px) {
+  .edges {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width : 1440px) {
+  .edges {
+    max-width: 1440px;
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -807,6 +831,8 @@ template {
     width: auto;
     bottom: auto;
     box-shadow: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }
 
@@ -1247,6 +1273,12 @@ template {
   }
 }
 
+@media (min-width: 1440px) {
+  .bestsellers {
+    max-width: 1440px;
+  }
+}
+
 @media (min-width: 320px) {
   .cards {
     list-style-type: none;
@@ -1258,7 +1290,7 @@ template {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .cards {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 10px));
@@ -1462,5 +1494,77 @@ template {
   .card__add2cart_load::before {
     animation: rotation 1s linear infinite;
     background-image: url("../../img/svg/loading-1.svg");
+  }
+}
+
+@media (min-width: 320px) {
+  .review {
+    background-color: #fff;
+    padding: 30px 0;
+    box-shadow: inset 0px 2px 2px rgba(154, 147, 140, 0.5), inset 0 -2px 2px rgba(154, 147, 140, 0.5);
+  }
+}
+
+@media (min-width: 320px) {
+  .review__wrapper {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .review__wrapper {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.2em;
+    color: #138535;
+    text-align: center;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__text {
+    padding: 0px 30px 5px 30px;
+  }
+
+  .edges__text::before {
+    display: block;
+    width: 143px;
+    height: 143px;
+    content: '';
+    margin: 0 auto 10px auto;
+    background-image: url("../../img/edges.png");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px #c0c0c0;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__text_type_effektivnost::before {
+    background-position: -143px -143px;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__text_type_kachestvo::before {
+    background-position: 0 -143px;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__text_type_organichnost::before {
+    background-position: -143px 0;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__text_type_tsena::before {
+    background-position: 0 0;
   }
 }
