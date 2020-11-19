@@ -1,0 +1,11 @@
+@media (min-width : 320px) {
+  .column {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media (min-width : 1440px) {
+  .column {
+    max-width: 1440px;
+  }
+}

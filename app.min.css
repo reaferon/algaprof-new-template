@@ -1142,6 +1142,19 @@ template {
   }
 }
 
+@media (min-width: 320px) {
+  .column {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .column {
+    max-width: 1440px;
+  }
+}
+
 /* footer */
 
 @media (min-width: 320px) {
@@ -1283,7 +1296,6 @@ template {
   .bestsellers {
     margin: 0 auto;
     padding: 0;
-    display: block;
   }
 }
 
@@ -1414,6 +1426,7 @@ template {
     padding: 0;
     width: 100%;
     object-fit: cover;
+    cursor: pointer;
   }
 }
 
