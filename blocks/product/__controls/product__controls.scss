@@ -1,0 +1,22 @@
+@media (min-width : 320px) {
+  .product__controls {
+    margin: 0 auto;
+    padding: 0;
+    outline: 1px solid #dadada;
+    background-color: #fff;
+    width: calc(100% - 10px);
+    margin: 10px 5px 0px 5px;
+  }
+}
+@media (min-width : 768px) {
+  .product__controls {
+    width: calc(100% - 320px);
+    // height: 500px;
+    
+  }
+}
+@media (min-width : 1024px) {
+  .product__controls {
+    width: calc(100% - 470px);
+  }
+}

@@ -1,0 +1,15 @@
+@media (min-width : 320px) {
+  .product__image {
+    padding: 0;
+    width: 100%;
+    object-fit: fill;
+  }
+}
+@media (min-width : 768px) {
+  .product__image {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    object-fit: fill;
+  }
+}

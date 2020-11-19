@@ -1,0 +1,7 @@
+@media (min-width : 320px) {
+  .product__image-switcher-item_active {
+    outline: 1px solid $color_green;
+    opacity: .3;
+    cursor: auto;
+  }
+}

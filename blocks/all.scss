@@ -56,7 +56,7 @@
 @import "./overlay/_active/overlay_active.scss";
 
 /* card */
-@import "./bestsellers/bestsellers.scss";
+@import "./column/column.scss";
 @import "./cards/cards.scss";
 @import "./cards/_size/cards_size_large.scss";
 @import "./cards/_size/cards_size_small.scss";
@@ -72,9 +72,9 @@
 @import "./card/__add2cart/_active/card__add2cart_active.scss";
 @import "./card/__add2cart/_load/card__add2cart_load.scss";
 
+/* index */
 @import "./review/review.scss";
 @import "./review/__wrapper/review__wrapper.scss";
-
 @import "./edges/edges.css";
 @import "./edges/__title/eges__title.scss";
 @import "./edges/__title/_type/edges__title_type_effektivnost.scss";
@@ -86,3 +86,13 @@
 @import "./edges/__text/_type/edges__text_type_kachestvo.scss";
 @import "./edges/__text/_type/edges__text_type_organichnost.scss";
 @import "./edges/__text/_type/edges__text_type_tsena.scss";
+
+/* product */
+@import "./product/product.scss";
+@import "./product/__images/product__images.scss";
+@import "./product/__image/product__image.scss";
+@import "./product/__image-switcher/product__image-switcher.scss";
+@import "./product/__image-switcher-item/product__image-switcher-item.scss";
+@import "./product/__image-switcher-item/_active/product__image-switcher-item_active.scss";
+@import "./product/__controls/product__controls.scss";
+@import "./product/__description/product__description.scss";
