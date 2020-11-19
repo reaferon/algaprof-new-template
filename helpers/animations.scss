@@ -11,6 +11,19 @@
     transform: scale(1);
   }
 }
+@keyframes pulse_small {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes pulse_big {
   0% {
     transform: scale(1);

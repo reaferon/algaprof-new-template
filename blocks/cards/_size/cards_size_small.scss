@@ -1,0 +1,29 @@
+@media (min-width : 320px) {
+  .cards_size_small {
+
+  }
+}
+@media (min-width : 640px) {
+  .cards_size_small {
+    // justify-content: space-between;
+    // //justify-content: space-between;
+    // padding:0;
+    // outline: 1px solid red;
+    // display: grid;
+    // grid-template-columns: repeat(2, calc(50% - 10px));
+    // gap: 10px;
+    // margin: 0 auto;
+    // //padding: 10px;
+    // width: calc(100% - 10px);
+  }
+}
+@media (min-width : 1024px) {
+  .cards_size_small {
+    grid-template-columns: repeat(2, calc(50% - 10px));
+  }
+}
+@media (min-width : 1280px) { 
+  .cards_size_small {
+    grid-template-columns: repeat(4, calc(25% - 10px));
+  }
+}

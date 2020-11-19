@@ -57,6 +57,8 @@
 /* card */
 @import "./bestsellers/bestsellers.scss";
 @import "./cards/cards.scss";
+@import "./cards/_size/cards_size_large.scss";
+@import "./cards/_size/cards_size_small.scss";
 @import "./card/card.scss";
 @import "./card/_margin/card_margin.scss";
 @import "./card/__title/card__title.scss";
