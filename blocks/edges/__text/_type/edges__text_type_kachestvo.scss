@@ -1,9 +1,13 @@
 @media (min-width : 320px) {
   .edges__text_type_kachestvo {
+    color: $color_green;
 
     &::before {
-      background-position: 0 -143px;
-      
+      //background-position: -143px -143px;
+      background-image: url(/img/svg/kachestvo.svg);
+      background-size: 70%;
+      background-position: center center;
+      background-color: $color_green;
     }
   }
 }

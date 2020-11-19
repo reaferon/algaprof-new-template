@@ -1500,7 +1500,6 @@ template {
 @media (min-width: 320px) {
   .review {
     background-color: #fff;
-    padding: 30px 0;
     box-shadow: inset 0px 2px 2px rgba(154, 147, 140, 0.5), inset 0 -2px 2px rgba(154, 147, 140, 0.5);
   }
 }
@@ -1508,12 +1507,14 @@ template {
 @media (min-width: 320px) {
   .review__wrapper {
     margin: 0 auto;
+    padding: 10px 5px;
   }
 }
 
 @media (min-width: 1440px) {
   .review__wrapper {
     max-width: 1440px;
+    padding: 30px 0;
   }
 }
 
@@ -1524,6 +1525,31 @@ template {
     font-size: 1.2em;
     color: #138535;
     text-align: center;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__title_type_effektivnost {
+    color: #3f48cc;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__title_type_kachestvo {
+    color: #138535;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__title_type_organichnost {
+    color: #00a2e8;
+  }
+}
+
+@media (min-width: 320px) {
+  .edges__title_type_tsena {
+    color: #ed1c24;
   }
 }
 
@@ -1532,39 +1558,70 @@ template {
     padding: 0px 30px 5px 30px;
   }
 
+  .edges__text:hover {
+    animation: pulse .5s ease-in-out;
+  }
+
   .edges__text::before {
     display: block;
-    width: 143px;
-    height: 143px;
+    width: 250px;
+    height: 250px;
     content: '';
     margin: 0 auto 10px auto;
-    background-image: url("../../img/edges.png");
     background-repeat: no-repeat;
     border-radius: 50%;
-    box-shadow: 2px 2px 2px #c0c0c0;
+    box-shadow: 3px 3px 5px #c0c0c0;
+    background-size: 70%;
+    background-position: center center;
   }
 }
 
 @media (min-width: 320px) {
+  .edges__text_type_effektivnost {
+    color: #3f48cc;
+  }
+
   .edges__text_type_effektivnost::before {
-    background-position: -143px -143px;
+    background-image: url("../../img/svg/effektivnost.svg");
+    background-size: 70%;
+    background-position: center center;
+    background-color: #3f48cc;
   }
 }
 
 @media (min-width: 320px) {
+  .edges__text_type_kachestvo {
+    color: #138535;
+  }
+
   .edges__text_type_kachestvo::before {
-    background-position: 0 -143px;
+    background-image: url("../../img/svg/kachestvo.svg");
+    background-size: 70%;
+    background-position: center center;
+    background-color: #138535;
   }
 }
 
 @media (min-width: 320px) {
+  .edges__text_type_organichnost {
+    color: #00a2e8;
+  }
+
   .edges__text_type_organichnost::before {
-    background-position: -143px 0;
+    background-image: url("../../img/svg/organichnost.svg");
+    background-color: #00a2e8;
   }
 }
 
 @media (min-width: 320px) {
+  .edges__text_type_tsena {
+    color: #ed1c24;
+  }
+
   .edges__text_type_tsena::before {
-    background-position: 0 0;
+    background-image: url("../../img/svg/tsena.svg");
+    background-size: 70%;
+    background-position: center center;
+    background-color: #ed1c24;
   }
 }

@@ -1,9 +1,10 @@
 @media (min-width : 320px) {
   .edges__text_type_organichnost {
+    color: $color_lightblue;
 
     &::before {
-      background-position: -143px 0;
-      
+      background-image: url(/img/svg/organichnost.svg);
+      background-color: $color_lightblue;
     }
   }
 }

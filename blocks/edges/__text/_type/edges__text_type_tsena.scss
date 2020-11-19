@@ -1,9 +1,13 @@
 @media (min-width : 320px) {
   .edges__text_type_tsena {
+    color: $color_red;
 
     &::before {
-      background-position: 0 0;
-      
+      //background-position: -143px -143px;
+      background-image: url(/img/svg/tsena.svg);
+      background-size: 70%;
+      background-position: center center;
+      background-color: $color_red;
     }
   }
 }

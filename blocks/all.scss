@@ -74,6 +74,10 @@
 
 @import "./edges/edges.css";
 @import "./edges/__title/eges__title.scss";
+@import "./edges/__title/_type/edges__title_type_effektivnost.scss";
+@import "./edges/__title/_type/edges__title_type_kachestvo.scss";
+@import "./edges/__title/_type/edges__title_type_organichnost.scss";
+@import "./edges/__title/_type/edges__title_type_tsena.scss";
 @import "./edges/__text/edges__text.scss";
 @import "./edges/__text/_type/edges__text_type_effektivnost.scss";
 @import "./edges/__text/_type/edges__text_type_kachestvo.scss";
